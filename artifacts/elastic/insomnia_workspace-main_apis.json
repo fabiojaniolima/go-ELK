@@ -1,0 +1,3960 @@
+{
+    "_type":"export",
+    "__export_format":4,
+    "__export_date":"2020-05-31T22:57:37.890Z",
+    "__export_source":"insomnia.desktop.app:v7.1.1",
+    "resources":[
+       {
+          "_id":"req_dd7b0246a11047e7b32117f19ad54562",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1588898101887,
+          "description":"Mostra o nome do host, nome do cluster, versões do Elasticsearch e outros dados.",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1589815457764,
+          "method":"GET",
+          "modified":1590933746680,
+          "name":"Elastic Info",
+          "parameters":[
+
+          ],
+          "parentId":"wrk_af7d97f6c23c4ea9a0c7716acfd78f82",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}",
+          "_type":"request"
+       },
+       {
+          "_id":"wrk_af7d97f6c23c4ea9a0c7716acfd78f82",
+          "created":1588854418550,
+          "description":"",
+          "modified":1589230470974,
+          "name":"Elastic query",
+          "parentId":null,
+          "_type":"workspace"
+       },
+       {
+          "_id":"req_a091b4943eef4fa2bb4d4c7ad2f86ae7",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1588982846822,
+          "description":"Mostra o nome do host, nome do cluster, versões e outros dados.\n\nhttps://www.elastic.co/guide/en/elasticsearch/reference/7.4/licensing-apis.html",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1589815457739,
+          "method":"GET",
+          "modified":1590933778478,
+          "name":"License",
+          "parameters":[
+
+          ],
+          "parentId":"wrk_af7d97f6c23c4ea9a0c7716acfd78f82",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_license",
+          "_type":"request"
+       },
+       {
+          "_id":"req_bf9d5dcc11ee40c995e17781618a1197",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1588963254310,
+          "description":"## return just process\nGET /_nodes/process\n\n## same as above\nGET /_nodes/_all/process\n\n## return just jvm and process of only nodeId1 and nodeId2\nGET /_nodes/nodeId1,nodeId2/jvm,process\n\n## same as above\nGET /_nodes/nodeId1,nodeId2/info/jvm,process\n\n## return all the information of only nodeId1 and nodeId2\nGET /_nodes/nodeId1,nodeId2/_all",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588967160653,
+          "method":"GET",
+          "modified":1588981060113,
+          "name":"Masters",
+          "parameters":[
+             {
+                "description":"",
+                "id":"pair_0dc870b61f0d40b394f3958efa6f1933",
+                "name":"format",
+                "value":"json"
+             }
+          ],
+          "parentId":"fld_35e58bbf0e2b49028512179fd2a3022c",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_cat/master",
+          "_type":"request"
+       },
+       {
+          "_id":"fld_35e58bbf0e2b49028512179fd2a3022c",
+          "created":1588854778360,
+          "description":"",
+          "environment":{
+
+          },
+          "environmentPropertyOrder":null,
+          "metaSortKey":-1588854892441.5,
+          "modified":1588984483381,
+          "name":"Manager Cluster",
+          "parentId":"wrk_af7d97f6c23c4ea9a0c7716acfd78f82",
+          "_type":"request_group"
+       },
+       {
+          "_id":"req_69461820f46141ac97d5d2ce9bde49ef",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1588963117485,
+          "description":"Referência: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/cat-nodes.html\n\n## return just process\nGET /_nodes/process\n\n## same as above\nGET /_nodes/_all/process\n\n## return just jvm and process of only nodeId1 and nodeId2\nGET /_nodes/nodeId1,nodeId2/jvm,process\n\n## same as above\nGET /_nodes/nodeId1,nodeId2/info/jvm,process\n\n## return all the information of only nodeId1 and nodeId2\nGET /_nodes/nodeId1,nodeId2/_all",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588967160646.75,
+          "method":"GET",
+          "modified":1590933803763,
+          "name":"Nodes",
+          "parameters":[
+             {
+                "description":"",
+                "disabled":false,
+                "id":"pair_0dc870b61f0d40b394f3958efa6f1933",
+                "name":"format",
+                "value":"json"
+             }
+          ],
+          "parentId":"fld_35e58bbf0e2b49028512179fd2a3022c",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_cat/nodes",
+          "_type":"request"
+       },
+       {
+          "_id":"req_f9b63c7ec7a44c23b747ba731a1214f8",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1588963290221,
+          "description":"## return just process\nGET /_nodes/process\n\n## same as above\nGET /_nodes/_all/process\n\n## return just jvm and process of only nodeId1 and nodeId2\nGET /_nodes/nodeId1,nodeId2/jvm,process\n\n## same as above\nGET /_nodes/nodeId1,nodeId2/info/jvm,process\n\n## return all the information of only nodeId1 and nodeId2\nGET /_nodes/nodeId1,nodeId2/_all",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588967160643.625,
+          "method":"GET",
+          "modified":1589074647659,
+          "name":"Shards",
+          "parameters":[
+             {
+                "description":"",
+                "disabled":false,
+                "id":"pair_a2632499740240979188c307397263bd",
+                "name":"format",
+                "value":"json"
+             }
+          ],
+          "parentId":"fld_35e58bbf0e2b49028512179fd2a3022c",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_cat/shards/{% prompt 'index-name', 'Nome do índice', 'example-index-name', '', false, true %}",
+          "_type":"request"
+       },
+       {
+          "_id":"req_8895845382884608b5eb537d4762c524",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1590933338117,
+          "description":"## return just process\nGET /_nodes/process\n\n## same as above\nGET /_nodes/_all/process\n\n## return just jvm and process of only nodeId1 and nodeId2\nGET /_nodes/nodeId1,nodeId2/jvm,process\n\n## same as above\nGET /_nodes/nodeId1,nodeId2/info/jvm,process\n\n## return all the information of only nodeId1 and nodeId2\nGET /_nodes/nodeId1,nodeId2/_all",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588967160642.0625,
+          "method":"GET",
+          "modified":1590933502868,
+          "name":"Allocation",
+          "parameters":[
+             {
+                "description":"",
+                "disabled":false,
+                "id":"pair_a2632499740240979188c307397263bd",
+                "name":"format",
+                "value":"json"
+             }
+          ],
+          "parentId":"fld_35e58bbf0e2b49028512179fd2a3022c",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_cat/allocation/{% prompt 'node-id', 'Node-ID (deixe em branco para considerar todos. Para filtrar por multiplos node-ids separe por virgula)', '', '', false, false %}",
+          "_type":"request"
+       },
+       {
+          "_id":"req_72aee160e4534c3fbfbdf7508adfe5f8",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1588971761010,
+          "description":"## return just process\nGET /_nodes/process\n\n## same as above\nGET /_nodes/_all/process\n\n## return just jvm and process of only nodeId1 and nodeId2\nGET /_nodes/nodeId1,nodeId2/jvm,process\n\n## same as above\nGET /_nodes/nodeId1,nodeId2/info/jvm,process\n\n## return all the information of only nodeId1 and nodeId2\nGET /_nodes/nodeId1,nodeId2/_all",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588967160640.5,
+          "method":"GET",
+          "modified":1588971892698,
+          "name":"Thread Pool",
+          "parameters":[
+             {
+                "description":"",
+                "id":"pair_0dc870b61f0d40b394f3958efa6f1933",
+                "name":"format",
+                "value":"json"
+             }
+          ],
+          "parentId":"fld_35e58bbf0e2b49028512179fd2a3022c",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_cat/thread_pool",
+          "_type":"request"
+       },
+       {
+          "_id":"req_b321bc1b61ae4f6fb241f2fe8fb3453e",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"transient\": {\n\t\t\"indices.lifecycle.poll_interval\": null\n\t}\n}"
+          },
+          "created":1590580366076,
+          "description":"Referência: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/ilm-settings.html#_cluster_level_settings",
+          "headers":[
+             {
+                "id":"pair_584dfd1a1ce44d609347c12bbc350f57",
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588967098893.5625,
+          "method":"PUT",
+          "modified":1590933829932,
+          "name":"Applay settings",
+          "parameters":[
+
+          ],
+          "parentId":"fld_e08000c72b77400eb5a17d339e368c23",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_cluster/settings",
+          "_type":"request"
+       },
+       {
+          "_id":"fld_e08000c72b77400eb5a17d339e368c23",
+          "created":1588967160603,
+          "description":"",
+          "environment":{
+
+          },
+          "environmentPropertyOrder":null,
+          "metaSortKey":-1588967160603,
+          "modified":1588967160603,
+          "name":"Cluster",
+          "parentId":"fld_35e58bbf0e2b49028512179fd2a3022c",
+          "_type":"request_group"
+       },
+       {
+          "_id":"req_f9c22247fcbf468a9059cfcacb34faea",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1588900621808,
+          "description":"",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588967098868.5625,
+          "method":"GET",
+          "modified":1590580983060,
+          "name":"Settings",
+          "parameters":[
+             {
+                "description":"",
+                "id":"pair_be254ff824074c6883ad7eb2ee441b67",
+                "name":"include_defaults",
+                "value":"true"
+             }
+          ],
+          "parentId":"fld_e08000c72b77400eb5a17d339e368c23",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_cluster/settings",
+          "_type":"request"
+       },
+       {
+          "_id":"req_0923e743f5a84f02ab4f87b2e74903b5",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1588900568539,
+          "description":"",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588967098843.5625,
+          "method":"GET",
+          "modified":1588968888054,
+          "name":"Health",
+          "parameters":[
+
+          ],
+          "parentId":"fld_e08000c72b77400eb5a17d339e368c23",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_cluster/health/{% prompt 'index-level-status', 'Informe um índice para visualizar o estado do cluster no contexto do índice. Deixe em branco para visualziar o estado real do cluster no contexto global', '', '', false, false %}",
+          "_type":"request"
+       },
+       {
+          "_id":"req_1cf549cd2e1a464295716037ba4d6e45",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1588900653657,
+          "description":"Referência: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/cluster-stats.html",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588967098743.5625,
+          "method":"GET",
+          "modified":1590933852776,
+          "name":"Stats",
+          "parameters":[
+             {
+                "description":"",
+                "disabled":false,
+                "id":"pair_f2f14c14f6dc4c26b10a94841d323ed0",
+                "name":"filter_path",
+                "value":"status,indices.count,indices.shards.total,indices.shards.primaries,indices.shards.replication,nodes.count,nodes.versions,nodes.os.mem.total,nodes.os.mem.free,nodes.os.mem.used,nodes.os.mem.*percent,nodes.process.cpu,nodes.jvm.max_uptime,nodes.jvm.mem.heap_used,nodes.jvm.mem.heap_max,nodes.jvm.threads,nodes.fs.total,nodes.fs.free,nodes.fs.available"
+             }
+          ],
+          "parentId":"fld_e08000c72b77400eb5a17d339e368c23",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_cluster/stats?human&pretty",
+          "_type":"request"
+       },
+       {
+          "_id":"req_4d48931a83cf445b9b9b522c4fce69a3",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1588962965808,
+          "description":"Referência: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/cluster-allocation-explain.html\n\nÉ possível considerar um índice especifico, para isso será necessário enviar um corpo em formato json. Ex:\n```\n{\n  \"index\": \"example-index-name\",\n\t\"shard\": 0,\n  \"primary\": true\n}\n```",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588967098693.5625,
+          "method":"GET",
+          "modified":1590933906424,
+          "name":"Allocation",
+          "parameters":[
+             {
+                "description":"",
+                "id":"pair_53389660055f4c1093f5675e42fd345c",
+                "name":"include_disk_info",
+                "value":"true"
+             },
+             {
+                "description":"",
+                "disabled":true,
+                "id":"pair_6098d6827c0e4f90aca5d00166742dc5",
+                "name":"include_yes_decisions",
+                "value":"true"
+             }
+          ],
+          "parentId":"fld_e08000c72b77400eb5a17d339e368c23",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_cluster/allocation/explain",
+          "_type":"request"
+       },
+       {
+          "_id":"req_ef455ef07170465688d143fd82e987e2",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"commands\": [\n\t\t{\n\t\t\t\"move\": {\n\t\t\t\t\"index\": \"example-index-name\",\n\t\t\t\t\"shard\": 0,\n\t\t\t\t\"from_node\": \"node1\",\n\t\t\t\t\"to_node\": \"node2\"\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\t\"allocate_replica\": {\n\t\t\t\t\"index\": \"example-index-name\",\n\t\t\t\t\"shard\": 1,\n\t\t\t\t\"node\": \"node3\"\n\t\t\t}\n\t\t}\n\t]\n}"
+          },
+          "created":1589813798003,
+          "description":"## retry_failed\n\nExiste um cenário onde após muitas falhas na alocação de um shard o cluster bloqueia o mesmo em um estado de falha. Após solucionar o problema basta chamar essa API passando `retry_failed=true` como query parameter para disparar uma nova rodada de tentativas de realocação, neste caso o corpo da requisição é opcional.\n\nReferência: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/cluster-reroute.html",
+          "headers":[
+             {
+                "id":"pair_cb26e4fdf9fd41a38469551c4e70d1db",
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588965461269.6953,
+          "method":"POST",
+          "modified":1590933929116,
+          "name":"Reroute shard",
+          "parameters":[
+             {
+                "description":"",
+                "disabled":true,
+                "id":"pair_cd937f9e3dd64af7b448a9e01de21dd9",
+                "name":"retry_failed",
+                "value":"true"
+             }
+          ],
+          "parentId":"fld_e08000c72b77400eb5a17d339e368c23",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_cluster/reroute",
+          "_type":"request"
+       },
+       {
+          "_id":"req_813c9c342f404e6e8d8aee73d51d1809",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1588898391532,
+          "description":"## return just process\nGET /_nodes/process\n\n## same as above\nGET /_nodes/_all/process\n\n## return just jvm and process of only nodeId1 and nodeId2\nGET /_nodes/nodeId1,nodeId2/jvm,process\n\n## same as above\nGET /_nodes/nodeId1,nodeId2/info/jvm,process\n\n## return all the information of only nodeId1 and nodeId2\nGET /_nodes/nodeId1,nodeId2/_all",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588854892516.5,
+          "method":"GET",
+          "modified":1589813632826,
+          "name":"List",
+          "parameters":[
+
+          ],
+          "parentId":"fld_8ab6082f9262468cbe493044554df3de",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_nodes/{% prompt 'node-type', 'Tipo de filtro (exemplos: \"_all\", \"_all,master:false\", \"data:true,ingest:true\", \"coordinating_only:true\" e outros)', '_all', '', false, false %}",
+          "_type":"request"
+       },
+       {
+          "_id":"fld_8ab6082f9262468cbe493044554df3de",
+          "created":1588967098692,
+          "description":"",
+          "environment":{
+
+          },
+          "environmentPropertyOrder":null,
+          "metaSortKey":-1588967098692,
+          "modified":1588967098692,
+          "name":"Nodes",
+          "parentId":"fld_35e58bbf0e2b49028512179fd2a3022c",
+          "_type":"request_group"
+       },
+       {
+          "_id":"req_b1c76bc5593f411aa2636560dd854056",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1588966425377,
+          "description":"",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588854892504,
+          "method":"GET",
+          "modified":1589814728767,
+          "name":"Stats",
+          "parameters":[
+
+          ],
+          "parentId":"fld_8ab6082f9262468cbe493044554df3de",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_nodes/{% prompt 'node-id', 'Informe o nó ou conjunto a ser consultado (ex: node1,node2,node3). Para consultar todos os nós do cluster informe: _all', '_all', '', false, false %}/stats/{% prompt 'metric', 'Informe a métrica desejada ou deixe em branco para visualizar todas (Ex de métricas: jvm,os,process,thread_pool)', '', '', false, false %}",
+          "_type":"request"
+       },
+       {
+          "_id":"req_b06ee56b8699457eb0b9b295609f0d15",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1588900332967,
+          "description":"",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588854892491.5,
+          "method":"GET",
+          "modified":1589814783949,
+          "name":"Plugin",
+          "parameters":[
+
+          ],
+          "parentId":"fld_8ab6082f9262468cbe493044554df3de",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_nodes/{% prompt 'node-id', 'Informe o nó ou conjunto a ser consultado (ex: node1,node2,node3). Para consultar todos os nós do cluster informe: _all', '_all', '', false, false %}/plugins",
+          "_type":"request"
+       },
+       {
+          "_id":"req_7e5fe5952a3240c991086a03ce86e2b4",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1588900410661,
+          "description":"## return just process\nGET /_nodes/process\n\n## same as above\nGET /_nodes/_all/process\n\n## return just jvm and process of only nodeId1 and nodeId2\nGET /_nodes/nodeId1,nodeId2/jvm,process\n\n## same as above\nGET /_nodes/nodeId1,nodeId2/info/jvm,process\n\n## return all the information of only nodeId1 and nodeId2\nGET /_nodes/nodeId1,nodeId2/_all",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588854892441.5,
+          "method":"GET",
+          "modified":1588968645921,
+          "name":"Ingest",
+          "parameters":[
+
+          ],
+          "parentId":"fld_8ab6082f9262468cbe493044554df3de",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_nodes/{% prompt 'node_id', 'Informe o nó ou conjunto a ser consultado (ex: node1,node2,node3). Para consultar todos os nós do cluster informe: _all', '_all', '', false, false %}/ingest",
+          "_type":"request"
+       },
+       {
+          "_id":"req_cd27746e25d54299b213ae09fa032e43",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"tokenizer\" : \"standard\",\n  \"filter\" : [\"uppercase\", \"asciifolding\"],\n\t\"char_filter\" : [\"html_strip\"],\n  \"text\" : \"this is a <b>test</b>\"\n}\n"
+          },
+          "created":1588983432957,
+          "description":"Mostra o nome do host, nome do cluster, versões e outros dados.\n\nhttps://www.elastic.co/guide/en/elasticsearch/reference/7.4/indices-analyze.html",
+          "headers":[
+             {
+                "id":"pair_66371c5f93b94c888b2c517157696689",
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588963597783,
+          "method":"POST",
+          "modified":1590933956222,
+          "name":"Loose analysis",
+          "parameters":[
+
+          ],
+          "parentId":"fld_611107f743db4eed9f3b688d7770349e",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_analyze",
+          "_type":"request"
+       },
+       {
+          "_id":"fld_611107f743db4eed9f3b688d7770349e",
+          "created":1588983404281,
+          "description":"",
+          "environment":{
+
+          },
+          "environmentPropertyOrder":null,
+          "metaSortKey":-1588854890742.586,
+          "modified":1588984511425,
+          "name":"Analyze",
+          "parentId":"wrk_af7d97f6c23c4ea9a0c7716acfd78f82",
+          "_type":"request_group"
+       },
+       {
+          "_id":"req_de14e639b5ad48d490d0513a913f461e",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"field\": \"email\",\n  \"text\" : \"USER@example.com\"\n}\n"
+          },
+          "created":1589810564777,
+          "description":"Mostra o nome do host, nome do cluster, versões e outros dados.\n\nhttps://www.elastic.co/guide/en/elasticsearch/reference/7.4/indices-analyze.html",
+          "headers":[
+             {
+                "id":"pair_66371c5f93b94c888b2c517157696689",
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588963484827.5625,
+          "method":"POST",
+          "modified":1590933965365,
+          "name":"Index-based analysis",
+          "parameters":[
+
+          ],
+          "parentId":"fld_611107f743db4eed9f3b688d7770349e",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/{% prompt 'index-name', 'Nome do índice', 'example-index-name', '', false, true %}/_analyze",
+          "_type":"request"
+       },
+       {
+          "_id":"req_ec12fb9b139b4d3093b3ac5fad977400",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"description\": \"Make the address.state field uppercase\",\n\t\"version\" : 1,\n\t\"processors\": [\n\t\t{\n\t\t\t\"uppercase\": {\n\t\t\t\t\"field\": \"address.state\"\n\t\t\t}\n\t\t}\n\t]\n}"
+          },
+          "created":1589051894305,
+          "description":"",
+          "headers":[
+             {
+                "id":"pair_57c7242316e94ed1a95e12f91b0be2ec",
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588854892582.125,
+          "method":"PUT",
+          "modified":1589496906430,
+          "name":"Create/Update",
+          "parameters":[
+
+          ],
+          "parentId":"fld_2ef9391c8df547f19a2678b633993965",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_ingest/pipeline/{% prompt 'pipeline-name', 'Nome da pipeline', '', '', false, false %}",
+          "_type":"request"
+       },
+       {
+          "_id":"fld_2ef9391c8df547f19a2678b633993965",
+          "created":1589052215812,
+          "description":"",
+          "environment":{
+
+          },
+          "environmentPropertyOrder":null,
+          "metaSortKey":-1588854889893.129,
+          "modified":1589052242974,
+          "name":"Pipeline",
+          "parentId":"wrk_af7d97f6c23c4ea9a0c7716acfd78f82",
+          "_type":"request_group"
+       },
+       {
+          "_id":"req_d4efa2764e754e5e8e2f82ac00e28ec8",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1589052349298,
+          "description":"",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588854892577.4375,
+          "method":"GET",
+          "modified":1589052429007,
+          "name":"List/Show",
+          "parameters":[
+
+          ],
+          "parentId":"fld_2ef9391c8df547f19a2678b633993965",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_ingest/pipeline/{% prompt 'pipeline-name', 'Informe o nome da pipeline ou deixe em branco para listar todas', '', '', false, false %}",
+          "_type":"request"
+       },
+       {
+          "_id":"req_fa7350a4d4434262a099e24ff63d6046",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"pipeline\": {\n\t\t\"description\": \"Make the address.state field uppercase\",\n\t\t\"version\": 1,\n\t\t\"processors\": [\n\t\t\t{\n\t\t\t\t\"uppercase\": {\n\t\t\t\t\t\"field\": \"address.state\"\n\t\t\t\t}\n\t\t\t}\n\t\t]\n\t},\n\t\"docs\": [\n\t\t{\n\t\t\t\"_source\": {\n\t\t\t\t\"address\": {\n\t\t\t\t\t\"state\": \"ak\"\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t]\n}"
+          },
+          "created":1589053422588,
+          "description":"Referência: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/simulate-pipeline-api.html",
+          "headers":[
+             {
+                "id":"pair_8fd4913e4ccb4743a1615ce65390e87e",
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588854892726.2656,
+          "method":"POST",
+          "modified":1590933987811,
+          "name":"Self contained",
+          "parameters":[
+             {
+                "description":"",
+                "disabled":true,
+                "id":"pair_7c9c553c3dd8481f9e40d3571d35a956",
+                "name":"verbose",
+                "value":"true"
+             }
+          ],
+          "parentId":"fld_d4b0a2d61a744434a37d50cc204c1e74",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_ingest/pipeline/_simulate",
+          "_type":"request"
+       },
+       {
+          "_id":"fld_d4b0a2d61a744434a37d50cc204c1e74",
+          "created":1589054007836,
+          "description":"",
+          "environment":{
+
+          },
+          "environmentPropertyOrder":null,
+          "metaSortKey":-1588854892576.8516,
+          "modified":1589054010626,
+          "name":"Simulate",
+          "parentId":"fld_2ef9391c8df547f19a2678b633993965",
+          "_type":"request_group"
+       },
+       {
+          "_id":"req_f7b0575bb9b34e6c8cd669eb10ff0729",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"docs\": [\n\t\t{\n\t\t\t\"_source\": {\n\t\t\t\t\"address\": {\n\t\t\t\t\t\"state\": \"ak\"\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t]\n}"
+          },
+          "created":1589053095962,
+          "description":"Referência: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/simulate-pipeline-api.html",
+          "headers":[
+             {
+                "id":"pair_8fd4913e4ccb4743a1615ce65390e87e",
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588854892676.2656,
+          "method":"POST",
+          "modified":1590934003514,
+          "name":"With existing pipeline",
+          "parameters":[
+             {
+                "description":"",
+                "disabled":true,
+                "id":"pair_7c9c553c3dd8481f9e40d3571d35a956",
+                "name":"verbose",
+                "value":"true"
+             }
+          ],
+          "parentId":"fld_d4b0a2d61a744434a37d50cc204c1e74",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_ingest/pipeline/{% prompt 'pipeline-name', 'Informe o nome da pipeline ou deixe em branco para listar todas', '', '', false, false %}/_simulate",
+          "_type":"request"
+       },
+       {
+          "_id":"req_7303b6dd28f844df908d549d65962fdb",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1589052996507,
+          "description":"",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588854892575.0938,
+          "method":"DELETE",
+          "modified":1589053000028,
+          "name":"Destroy",
+          "parameters":[
+
+          ],
+          "parentId":"fld_2ef9391c8df547f19a2678b633993965",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_ingest/pipeline/{% prompt 'pipeline-name', 'Informe o nome da pipeline ou deixe em branco para listar todas', '', '', false, false %}",
+          "_type":"request"
+       },
+       {
+          "_id":"req_b72419e714c5459db78d46fa896828da",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"aliases\": {\n\t\t\"example_index_name-alias\": {\n\t\t\t\"is_write_index\": true\n\t\t}\n\t},\n\t\"settings\": {\n\t\t\"index\": {\n\t\t\t\"sort.field\": \"created_at\",\n\t\t\t\"sort.order\": \"desc\",\n\t\t\t\"number_of_shards\": 1,\n\t\t\t\"number_of_replicas\": 1,\n\t\t\t\"refresh_interval\": \"30s\",\n\t\t\t\"default_pipeline\": \"example-pipeline-name\",\n\t\t\t\"lifecycle.name\": \"example-policy-name\"\n\t\t},\n\t\t\"analysis\": {\n\t\t\t\"normalizer\": {\n\t\t\t\t\"my_normalizer\": {\n\t\t\t\t\t\"type\": \"custom\",\n\t\t\t\t\t\"filter\": [\n\t\t\t\t\t\t\"lowercase\"\n\t\t\t\t\t]\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t},\n\t\"mappings\": {\n\t\t\"properties\": {\n\t\t\t\"name\": {\n\t\t\t\t\"type\": \"text\"\n\t\t\t},\n\t\t\t\"age\": {\n\t\t\t\t\"type\": \"byte\"\n\t\t\t},\n\t\t\t\"email\": {\n\t\t\t\t\"type\": \"keyword\",\n\t\t\t\t\"ignore_above\": 256,\n\t\t\t\t\"normalizer\": \"my_normalizer\"\n\t\t\t},\n\t\t\t\"office\": {\n\t\t\t\t\"type\": \"text\",\n\t\t\t\t\"norms\": false\n\t\t\t},\n\t\t\t\"skills\": {\n\t\t\t\t\"type\": \"text\",\n\t\t\t\t\"fields\": {\n\t\t\t\t\t\"keyword\": {\n\t\t\t\t\t\t\"type\": \"keyword\",\n\t\t\t\t\t\t\"ignore_above\": 256\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t},\n\t\t\t\"address\": {\n\t\t\t\t\"properties\": {\n\t\t\t\t\t\"city\": {\n\t\t\t\t\t\t\"type\": \"text\",\n\t\t\t\t\t\t\"fields\": {\n\t\t\t\t\t\t\t\"keyword\": {\n\t\t\t\t\t\t\t\t\"type\": \"keyword\",\n\t\t\t\t\t\t\t\t\"ignore_above\": 256\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t},\n\t\t\t\t\t\"state\": {\n\t\t\t\t\t\t\"type\": \"keyword\",\n\t\t\t\t\t\t\"ignore_above\": 256\n\t\t\t\t\t},\n\t\t\t\t\t\"state_full\": {\n\t\t\t\t\t\t\"type\": \"text\",\n\t\t\t\t\t\t\"fields\": {\n\t\t\t\t\t\t\t\"keyword\": {\n\t\t\t\t\t\t\t\t\"type\": \"keyword\",\n\t\t\t\t\t\t\t\t\"ignore_above\": 256\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t},\n\t\t\t\t\t\"street\": {\n\t\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t\t},\n\t\t\t\t\t\"zip_code\": {\n\t\t\t\t\t\t\"type\": \"keyword\",\n\t\t\t\t\t\t\"ignore_above\": 256\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t},\n\t\t\t\"salary\": {\n\t\t\t\t\"type\": \"float\"\n\t\t\t},\n\t\t\t\"biography\": {\n\t\t\t\t\"type\": \"text\",\n\t\t\t\t\"index\": false\n\t\t\t},\n\t\t\t\"created_at\": {\n\t\t\t\t\"type\": \"date\"\n\t\t\t}\n\t\t}\n\t}\n}"
+          },
+          "created":1588855032016,
+          "description":"Referência: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/tune-for-disk-usage.html\n\nÉ possível utilizar `char_filter` para fazer o mapping ou filtro virtual de caracteres/elementos. O dado original será gravado, porém, a recuperação irá considerar tanto o dado original quanto o mapping contido em `char_filter`: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/analysis-mapping-charfilter.html",
+          "headers":[
+             {
+                "id":"pair_57c7242316e94ed1a95e12f91b0be2ec",
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588854892591.5,
+          "method":"PUT",
+          "modified":1590934035219,
+          "name":"Create",
+          "parameters":[
+
+          ],
+          "parentId":"fld_f4452713b9b7484b8ea5894a0a679b08",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/{% prompt 'index-name', 'Nome do índice', '', '', false, false %}",
+          "_type":"request"
+       },
+       {
+          "_id":"fld_f4452713b9b7484b8ea5894a0a679b08",
+          "created":1588855001172,
+          "description":"",
+          "environment":{
+
+          },
+          "environmentPropertyOrder":null,
+          "metaSortKey":-1588854889043.6719,
+          "modified":1588984506388,
+          "name":"Index",
+          "parentId":"wrk_af7d97f6c23c4ea9a0c7716acfd78f82",
+          "_type":"request_group"
+       },
+       {
+          "_id":"req_b223ef7e115b445280070698827f2598",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1589199462095,
+          "description":"",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588854892586.8125,
+          "method":"POST",
+          "modified":1589199590338,
+          "name":"Close",
+          "parameters":[
+
+          ],
+          "parentId":"fld_f4452713b9b7484b8ea5894a0a679b08",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/{% prompt 'index-name', 'Nome do índice', '', '', false, false %}/_close",
+          "_type":"request"
+       },
+       {
+          "_id":"req_8dd54ae0999d41a5867d15c95e157005",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1589199491141,
+          "description":"",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588854892584.4688,
+          "method":"POST",
+          "modified":1589199596201,
+          "name":"Open",
+          "parameters":[
+
+          ],
+          "parentId":"fld_f4452713b9b7484b8ea5894a0a679b08",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/{% prompt 'index-name', 'Nome do índice', '', '', false, false %}/_open",
+          "_type":"request"
+       },
+       {
+          "_id":"req_50c9a8fa4f344569aaedae7ad8e5639f",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1589199604988,
+          "description":"",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588854892583.2969,
+          "method":"POST",
+          "modified":1589199757101,
+          "name":"Refresh",
+          "parameters":[
+
+          ],
+          "parentId":"fld_f4452713b9b7484b8ea5894a0a679b08",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/{% prompt 'index-name', 'Informe o nome do índice ou deixe em branco para considerar tudo', 'example-index-name', '', false, true %}/_refresh",
+          "_type":"request"
+       },
+       {
+          "_id":"req_7904d4db1a93419eb48fa6740abbf406",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n  \"conditions\": {\n    \"max_age\":   \"30d\",\n    \"max_docs\":  2000000,\n    \"max_size\":  \"50gb\"\n  }\n}"
+          },
+          "created":1590607015259,
+          "description":"Documentação: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/indices-rollover-index.html",
+          "headers":[
+             {
+                "id":"pair_c949bc34dff54583b286d51b7f2f36c4",
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588854892562.3984,
+          "method":"POST",
+          "modified":1590934060915,
+          "name":"Rollover",
+          "parameters":[
+
+          ],
+          "parentId":"fld_f4452713b9b7484b8ea5894a0a679b08",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/{% prompt 'index-alias', 'Informe o alias do índice', '', '', false, false %}/_rollover",
+          "_type":"request"
+       },
+       {
+          "_id":"req_9cee646b3344497a92cc6228098487c2",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1588898252052,
+          "description":"Documentação: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/cat-indices.html",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588854892541.5,
+          "method":"GET",
+          "modified":1590934079638,
+          "name":"List",
+          "parameters":[
+             {
+                "description":"",
+                "disabled":false,
+                "id":"pair_e599892bf6364f999ab7a6f0f2b259ea",
+                "name":"format",
+                "value":"json"
+             },
+             {
+                "description":"",
+                "disabled":true,
+                "id":"pair_281bb44e0fa04f9084db6272fb8cb0bd",
+                "name":"filter_path",
+                "value":"health,status,index,pri,rep"
+             }
+          ],
+          "parentId":"fld_f4452713b9b7484b8ea5894a0a679b08",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_cat/indices/{% prompt 'index-match', 'Realize uma busca vazia para retornar todos os índices. Utilize um match pattern como por exemplo: index-name* ou informe o nome completo de um índice', '', '', false, false %}",
+          "_type":"request"
+       },
+       {
+          "_id":"req_e2d0358aa4614a80ba60bd89c5ae1a8e",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1590692773209,
+          "description":"",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588854892540.3281,
+          "method":"GET",
+          "modified":1590692910428,
+          "name":"Stats",
+          "parameters":[
+             {
+                "description":"",
+                "disabled":false,
+                "id":"pair_e599892bf6364f999ab7a6f0f2b259ea",
+                "name":"format",
+                "value":"json"
+             },
+             {
+                "description":"",
+                "disabled":true,
+                "id":"pair_281bb44e0fa04f9084db6272fb8cb0bd",
+                "name":"filter_path",
+                "value":"_all.*.indexing"
+             }
+          ],
+          "parentId":"fld_f4452713b9b7484b8ea5894a0a679b08",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/{% prompt 'index-match', 'Nome do índice', '', '', false, false %}/_stats",
+          "_type":"request"
+       },
+       {
+          "_id":"req_fb89aee5135046e7a721dcf6a8f5bb6d",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1588963565350,
+          "description":"Documentação: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/cat-indices.html",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588854892539.1562,
+          "method":"GET",
+          "modified":1590934098442,
+          "name":"Show",
+          "parameters":[
+             {
+                "description":"",
+                "disabled":false,
+                "id":"pair_e599892bf6364f999ab7a6f0f2b259ea",
+                "name":"format",
+                "value":"json"
+             }
+          ],
+          "parentId":"fld_f4452713b9b7484b8ea5894a0a679b08",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/{% prompt 'index-name', 'Nome do índice', 'example-index-name', '', false, true %}",
+          "_type":"request"
+       },
+       {
+          "_id":"req_586d0a949aeb4e63a83dfe618b0ae1ff",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1588964301870,
+          "description":"Documentação: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/cat-indices.html",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588854892536.8125,
+          "method":"GET",
+          "modified":1590934114543,
+          "name":"Settings",
+          "parameters":[
+             {
+                "description":"",
+                "disabled":false,
+                "id":"pair_e599892bf6364f999ab7a6f0f2b259ea",
+                "name":"format",
+                "value":"json"
+             }
+          ],
+          "parentId":"fld_f4452713b9b7484b8ea5894a0a679b08",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/{% prompt 'index-name', 'Nome do índice (para listar todos utilize: _all)', '_all', '', false, false %}/_settings",
+          "_type":"request"
+       },
+       {
+          "_id":"req_489aac3cfb224d14b358a203f3e16a7c",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1590604714896,
+          "description":"Referência: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/indices-aliases.html",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588854892535.25,
+          "method":"GET",
+          "modified":1590934129604,
+          "name":"Alias",
+          "parameters":[
+
+          ],
+          "parentId":"fld_f4452713b9b7484b8ea5894a0a679b08",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_aliases",
+          "_type":"request"
+       },
+       {
+          "_id":"req_3a3044c81587436182c938b08a1f30c3",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1588960878129,
+          "description":"Não é possível alterar definições de mapeamento para um índice existente. Essa ação deve ser feita na criação do template ou via camada de sobreposição.",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588854892533.6875,
+          "method":"GET",
+          "modified":1589131197473,
+          "name":"Mapping",
+          "parameters":[
+             {
+                "description":"",
+                "disabled":false,
+                "id":"pair_e599892bf6364f999ab7a6f0f2b259ea",
+                "name":"format",
+                "value":"json"
+             }
+          ],
+          "parentId":"fld_f4452713b9b7484b8ea5894a0a679b08",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/{% prompt 'index-name', 'Nome do índice', 'example-index-name', '', false, true %}/_mapping",
+          "_type":"request"
+       },
+       {
+          "_id":"req_7558dd46ab9c4a19840443ae71acbf40",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1588963723735,
+          "description":"Documentação: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/cat-indices.html",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588854892530.5625,
+          "method":"GET",
+          "modified":1590934147447,
+          "name":"Count",
+          "parameters":[
+             {
+                "description":"",
+                "disabled":false,
+                "id":"pair_e599892bf6364f999ab7a6f0f2b259ea",
+                "name":"format",
+                "value":"json"
+             }
+          ],
+          "parentId":"fld_f4452713b9b7484b8ea5894a0a679b08",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/{% prompt 'index-name', 'Nome do índice', 'example-index-name', '', false, true %}/_count",
+          "_type":"request"
+       },
+       {
+          "_id":"req_96ca0a93698c49648192e577693dbefe",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1588857196348,
+          "description":"",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588854892491.5,
+          "method":"DELETE",
+          "modified":1588966134987,
+          "name":"Destroy",
+          "parameters":[
+
+          ],
+          "parentId":"fld_f4452713b9b7484b8ea5894a0a679b08",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/{% prompt 'index-name', 'Nome do índice', '', '', false, false %}",
+          "_type":"request"
+       },
+       {
+          "_id":"req_dfc2be9c14c54455a20a660aa84ee29d",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"index_patterns\": [\n\t\t\"example-index-name*\"\n\t],\n\t\"order\": 0,\n\t\"settings\": {\n\t\t\"index\": {\n\t\t\t\"sort.field\": \"created_at\",\n\t\t\t\"sort.order\": \"desc\",\n\t\t\t\"number_of_shards\": 1,\n\t\t\t\"number_of_replicas\": 1,\n\t\t\t\"refresh_interval\": \"30s\",\n\t\t\t\"default_pipeline\": \"example-pipeline-name\",\n\t\t\t\"lifecycle.name\": \"example-policy-name\"\n\t\t},\n\t\t\"analysis\": {\n\t\t\t\"normalizer\": {\n\t\t\t\t\"my_normalizer\": {\n\t\t\t\t\t\"type\": \"custom\",\n\t\t\t\t\t\"filter\": [\n\t\t\t\t\t\t\"lowercase\"\n\t\t\t\t\t]\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t},\n\t\"mappings\": {\n\t\t\"properties\": {\n\t\t\t\"name\": {\n\t\t\t\t\"type\": \"text\"\n\t\t\t},\n\t\t\t\"age\": {\n\t\t\t\t\"type\": \"byte\"\n\t\t\t},\n\t\t\t\"email\": {\n\t\t\t\t\"type\": \"keyword\",\n\t\t\t\t\"ignore_above\": 256,\n\t\t\t\t\"normalizer\": \"my_normalizer\"\n\t\t\t},\n\t\t\t\"office\": {\n\t\t\t\t\"type\": \"text\",\n\t\t\t\t\"norms\": false\n\t\t\t},\n\t\t\t\"skills\": {\n\t\t\t\t\"type\": \"text\",\n\t\t\t\t\"fields\": {\n\t\t\t\t\t\"keyword\": {\n\t\t\t\t\t\t\"type\": \"keyword\",\n\t\t\t\t\t\t\"ignore_above\": 256\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t},\n\t\t\t\"address\": {\n\t\t\t\t\"properties\": {\n\t\t\t\t\t\"city\": {\n\t\t\t\t\t\t\"type\": \"text\",\n\t\t\t\t\t\t\"fields\": {\n\t\t\t\t\t\t\t\"keyword\": {\n\t\t\t\t\t\t\t\t\"type\": \"keyword\",\n\t\t\t\t\t\t\t\t\"ignore_above\": 256\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t},\n\t\t\t\t\t\"state\": {\n\t\t\t\t\t\t\"type\": \"keyword\",\n\t\t\t\t\t\t\"ignore_above\": 256\n\t\t\t\t\t},\n\t\t\t\t\t\"state_full\": {\n\t\t\t\t\t\t\"type\": \"text\",\n\t\t\t\t\t\t\"fields\": {\n\t\t\t\t\t\t\t\"keyword\": {\n\t\t\t\t\t\t\t\t\"type\": \"keyword\",\n\t\t\t\t\t\t\t\t\"ignore_above\": 256\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t},\n\t\t\t\t\t\"street\": {\n\t\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t\t},\n\t\t\t\t\t\"zip_code\": {\n\t\t\t\t\t\t\"type\": \"keyword\",\n\t\t\t\t\t\t\"ignore_above\": 256\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t},\n\t\t\t\"salary\": {\n\t\t\t\t\"type\": \"float\"\n\t\t\t},\n\t\t\t\"biography\": {\n\t\t\t\t\"type\": \"text\",\n\t\t\t\t\"index\": false\n\t\t\t},\n\t\t\t\"created_at\": {\n\t\t\t\t\"type\": \"date\"\n\t\t\t}\n\t\t}\n\t}\n}"
+          },
+          "created":1588963862635,
+          "description":"Cria ou atualiza um template. Referência: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/indices-templates.html\n\n## Query params\nQuando `create=true` a ação de atualização irá falhar, este comportamento pode evitar alterações acidentais de templates existentes.",
+          "headers":[
+             {
+                "id":"pair_c7668557a8374792bb77203fe2067971",
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588854892572.75,
+          "method":"PUT",
+          "modified":1590934184067,
+          "name":"Create/Update",
+          "parameters":[
+             {
+                "description":"",
+                "disabled":true,
+                "id":"pair_6e572789acc64bf8a9ced486ac63e14d",
+                "name":"create",
+                "value":"true"
+             }
+          ],
+          "parentId":"fld_b88662f92ce24c3ead7a9a86aee93c1b",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_template/{% prompt 'template-name', 'Nome do template', '', '', false, false %}",
+          "_type":"request"
+       },
+       {
+          "_id":"fld_b88662f92ce24c3ead7a9a86aee93c1b",
+          "created":1588963823722,
+          "description":"",
+          "environment":{
+
+          },
+          "environmentPropertyOrder":null,
+          "metaSortKey":-1588854865258.875,
+          "modified":1588984492501,
+          "name":"Template",
+          "parentId":"wrk_af7d97f6c23c4ea9a0c7716acfd78f82",
+          "_type":"request_group"
+       },
+       {
+          "_id":"req_9058686191d8486a8b7e2e9b55cb34b5",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1588963835166,
+          "description":"Lista a definição completa do template, caso não seja informado o nome do template será retornada a lista completa de templates existentes juntamente com sua definição. Referência: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/indices-get-template.html",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588854892522.75,
+          "method":"GET",
+          "modified":1590934206893,
+          "name":"Show",
+          "parameters":[
+
+          ],
+          "parentId":"fld_b88662f92ce24c3ead7a9a86aee93c1b",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_template/{% prompt 'template-name', 'Nome do template (Opcional, se vazio irá listar tudo)', 'example-template-name', '', false, true %}",
+          "_type":"request"
+       },
+       {
+          "_id":"req_2032d3e1f76a4c94880cbbf82a251e70",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1588981634390,
+          "description":"Lista a definição completa do template, caso não seja informado o nome do template será retornada a lista completa de templates existentes juntamente com sua definição. Referência: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/indices-get-template.html",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588854892520.4062,
+          "method":"GET",
+          "modified":1590934227808,
+          "name":"List",
+          "parameters":[
+             {
+                "description":"",
+                "id":"pair_db1a092bac5347c89d72e11b70becbe4",
+                "name":"format",
+                "value":"json"
+             },
+             {
+                "description":"",
+                "disabled":false,
+                "id":"pair_661fc2ef5011478fb4c2f3b750573659",
+                "name":"s",
+                "value":"order:desc,index_patterns"
+             }
+          ],
+          "parentId":"fld_b88662f92ce24c3ead7a9a86aee93c1b",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_cat/templates",
+          "_type":"request"
+       },
+       {
+          "_id":"req_18ee32e4d1734623ba27fc5589d76ddb",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1588964678724,
+          "description":"",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588854892518.0625,
+          "method":"DELETE",
+          "modified":1588965433494,
+          "name":"Destroy",
+          "parameters":[
+
+          ],
+          "parentId":"fld_b88662f92ce24c3ead7a9a86aee93c1b",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_template/{% prompt 'template-name', 'Nome do template', '', '', false, false %}",
+          "_type":"request"
+       },
+       {
+          "_id":"req_bcf5d83f5e01483882487279d1692afe",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"name\": \"User Name\",\n\t\"email\": \"user@example.com\",\n\t\"age\": 30,\n\t\"office\": \"Full Stack Developer\",\n\t\"skills\": [\n\t\t\"javascript\",\n\t\t\"oracle database\",\n\t\t\"mongodb\"\n\t],\n\t\"address\": {\n\t\t\"street\": \"3501  Brooklyn Street\",\n\t\t\"city\": \"WASILLA\",\n\t\t\"state\": \"AK\",\n\t\t\"state_full\": \"Alaska\",\n\t\t\"zip_code\": \"99623\"\n\t},\n\t\"salary\": 7200.50,\n\t\"biography\": \"This is a test without indexing\",\n\t\"created_at\": \"{% now 'iso-8601', '' %}\"\n}"
+          },
+          "created":1588959637892,
+          "description":"Permite criar ou atualizar um documento.\n\n## Query Params\n\n###  op_type\nQuando definido como `create` a transação irá falhar caso o documento já exista.",
+          "headers":[
+             {
+                "id":"pair_8211c78c357140a088cadb48c061886f",
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588963371819,
+          "method":"POST",
+          "modified":1589810840886,
+          "name":"Create",
+          "parameters":[
+             {
+                "description":"",
+                "id":"pair_12552771bbb3465d978bcfcda60e46cf",
+                "name":"refresh",
+                "value":"true"
+             },
+             {
+                "description":"",
+                "disabled":true,
+                "id":"pair_c72b46e88a5c43cb919778b8433b3927",
+                "name":"pipeline",
+                "value":"example-pipeline"
+             }
+          ],
+          "parentId":"fld_d4bfb2d2cd034729a43cf7ad72f91d72",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/{% prompt 'index-name', 'Nome do índice', '', '', false, false %}/_doc",
+          "_type":"request"
+       },
+       {
+          "_id":"fld_d4bfb2d2cd034729a43cf7ad72f91d72",
+          "created":1588854591988,
+          "description":"",
+          "environment":{
+
+          },
+          "environmentPropertyOrder":null,
+          "metaSortKey":-1588854838076.25,
+          "modified":1588984488217,
+          "name":"Data",
+          "parentId":"wrk_af7d97f6c23c4ea9a0c7716acfd78f82",
+          "_type":"request_group"
+       },
+       {
+          "_id":"req_c94a7adc9d864b78aca3080dc49cd324",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"doc\": {\n\t\t\"email\": \"user@other.com\",\n\t\t\"age\": 40,\n\t\t\"skills\": [\n\t\t\t\"javascript\",\n\t\t\t\"sql\",\n\t\t\t\"python\"\n\t\t]\n\t}\n}"
+          },
+          "created":1588959849344,
+          "description":"Permite criar ou atualizar um documento.\n\n## Query Params\n\n###  op_type\nQuando definido como `create` a transação irá falhar caso o documento já exista.",
+          "headers":[
+             {
+                "id":"pair_8211c78c357140a088cadb48c061886f",
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588963371794,
+          "method":"POST",
+          "modified":1589577446598,
+          "name":"Update",
+          "parameters":[
+
+          ],
+          "parentId":"fld_d4bfb2d2cd034729a43cf7ad72f91d72",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/{% prompt 'index-name', 'Nome do índice', '', '', false, false %}/_update/{% prompt 'id', 'ID do registro', '', '', false, false %}",
+          "_type":"request"
+       },
+       {
+          "_id":"req_032c9e84a32449e48c2825dce2c363c6",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"name\": \"User name\",\n\t\"email\": \"user@example.com\",\n\t\"age\": 30,\n\t\"skills\": [\n\t\t\"javascript\",\n\t\t\"sql\",\n\t\t\"mongodb\"\n\t],\n\t\"created_at\": \"{% now 'iso-8601', '' %}\",\n\t\"biography\": \"This is a test without indexing\"\n}"
+          },
+          "created":1588854606490,
+          "description":"Permite criar ou atualizar um documento.\n\n## Query Params\n\n###  op_type\nQuando definido como `create` a transação irá falhar caso o documento já exista.",
+          "headers":[
+             {
+                "id":"pair_8211c78c357140a088cadb48c061886f",
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588963371781.5,
+          "method":"PUT",
+          "modified":1589577463357,
+          "name":"Create/Update",
+          "parameters":[
+             {
+                "description":"",
+                "disabled":true,
+                "id":"pair_d6fc499f23d14430a9b2aa33c1a0ae92",
+                "name":"op_type",
+                "value":"create"
+             }
+          ],
+          "parentId":"fld_d4bfb2d2cd034729a43cf7ad72f91d72",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/{% prompt 'index-name', 'Nome do índice', '', '', false, false %}/_doc/{% prompt 'id', 'Record ID', '', '', false, false %}",
+          "_type":"request"
+       },
+       {
+          "_id":"req_2152a269cb714488b305a1ecd1d4c289",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1588963435461,
+          "description":"",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588963371775.25,
+          "method":"GET",
+          "modified":1588994942502,
+          "name":"Show",
+          "parameters":[
+
+          ],
+          "parentId":"fld_d4bfb2d2cd034729a43cf7ad72f91d72",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/{% prompt 'index-name', 'Nome do índice', 'example-index-name', '', false, true %}/_doc/{% prompt 'id', 'ID do registro', '', '', false, false %}",
+          "_type":"request"
+       },
+       {
+          "_id":"req_4cdbc4b52e9d40e0bdc980fd18669f8c",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"query\": {\n\t\t\"range\": {\n\t\t\t\"created_at\": {\n\t\t\t\t\"gte\": \"now-1h\"\n\t\t\t}\n\t\t}\n\t},\n\t\"sort\": [\n\t\t{\n\t\t\t\"created_at\": \"desc\"\n\t\t}\n\t]\n}"
+          },
+          "created":1588987184104,
+          "description":"Referência: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/search.html",
+          "headers":[
+             {
+                "id":"pair_8211c78c357140a088cadb48c061886f",
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588963371872.125,
+          "method":"GET",
+          "modified":1590934243381,
+          "name":"Last Hour",
+          "parameters":[
+             {
+                "description":"",
+                "disabled":false,
+                "id":"pair_e815bb7f722b43639825ea130c0d19c1",
+                "name":"filter_path",
+                "value":"hits.hits._source,hits.total.*"
+             }
+          ],
+          "parentId":"fld_581777088cf74a0eb5b717a4e46006c1",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/{% prompt 'index-name', 'Nome do índice', 'example-index-name', '', false, true %}/_search",
+          "_type":"request"
+       },
+       {
+          "_id":"fld_581777088cf74a0eb5b717a4e46006c1",
+          "created":1588987075366,
+          "description":"",
+          "environment":{
+
+          },
+          "environmentPropertyOrder":null,
+          "metaSortKey":-1588963371773.6875,
+          "modified":1588987077692,
+          "name":"Search",
+          "parentId":"fld_d4bfb2d2cd034729a43cf7ad72f91d72",
+          "_type":"request_group"
+       },
+       {
+          "_id":"req_752f0e4bf54041e18de02293be9c1b59",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"_source\": {\n\t\t\"excludes\": [\"biography\"]\n\t},\n\t\"query\": {\n\t\t\"term\": {\n\t\t\t\"skills\": \"javascript\"\n\t\t}\n\t},\n\t\"aggs\": {\n\t\t\"States\": {\n\t\t\t\"terms\": {\n\t\t\t\t\"field\": \"address.state\"\n\t\t\t}\n\t\t}\n\t}\n}"
+          },
+          "created":1588963393174,
+          "description":"Referência: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/search.html",
+          "headers":[
+             {
+                "id":"pair_8211c78c357140a088cadb48c061886f",
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588963371822.125,
+          "method":"GET",
+          "modified":1590934272337,
+          "name":"Match (keyword)",
+          "parameters":[
+             {
+                "description":"",
+                "disabled":true,
+                "id":"pair_0c5f5589c567495b9997e29a66373d8a",
+                "name":"filter_path",
+                "value":"hits.hits._source,hits.total.*"
+             }
+          ],
+          "parentId":"fld_581777088cf74a0eb5b717a4e46006c1",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/{% prompt 'index-name', 'Nome do índice', 'example-index-name', '', false, true %}/_doc/_search",
+          "_type":"request"
+       },
+       {
+          "_id":"req_626a862eb6a0406eb5683b632d5e4f5b",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"_source\": {\n\t\t\"excludes\": [\"biography\"]\n\t},\n\t\"query\": {\n\t\t\"bool\": {\n\t\t\t\"must\": [\n\t\t\t\t{\n\t\t\t\t\t\"term\": { \"skills\": \"oracle\" }\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"term\": { \"skills\": \"database\" }\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t},\n\t\"aggs\": {\n\t\t\"States\": {\n\t\t\t\"terms\": {\n\t\t\t\t\"field\": \"address.state\"\n\t\t\t}\n\t\t}\n\t}\n}"
+          },
+          "created":1589495904401,
+          "description":"Referência: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/search.html\n\n## Complemento\n- **Must**: Essa clausula deve aparecer em documentos que dão match e contribuem com o resultado final do score.\n- **Filter**: Realiza trabalho semelhante ao do must, filtra os resultados que aparecem nos documentos mas não contribui com o score.\n- **Should**: Premissas dentro do should podem aparecer em documentos que dão match, mas não é mandatório.\n- **must_not**: A Query dentro dessa clausula, removerá os documentos que deram match do resultado final.",
+          "headers":[
+             {
+                "id":"pair_8211c78c357140a088cadb48c061886f",
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588963371820.5625,
+          "method":"GET",
+          "modified":1590934288886,
+          "name":"Match (multiple keyword)",
+          "parameters":[
+             {
+                "description":"",
+                "disabled":true,
+                "id":"pair_0c5f5589c567495b9997e29a66373d8a",
+                "name":"filter_path",
+                "value":"hits.hits._source,hits.total.*"
+             }
+          ],
+          "parentId":"fld_581777088cf74a0eb5b717a4e46006c1",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/{% prompt 'index-name', 'Nome do índice', 'example-index-name', '', false, true %}/_doc/_search",
+          "_type":"request"
+       },
+       {
+          "_id":"req_4748ef78d90940bf9c4dd54c583b00b0",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"_source\": {\n\t\t\"includes\": [ \"*\", \"address.*\"],\n\t\t\"excludes\": [ \"*.zip_code\", \"*.street\" ]\n\t},\n  \"query\": {\n    \"match\": {\n      \"name\": {\n\t\t\t\t\"query\": \"User Name\",\n\t\t\t\t\"operator\": \"and\"\n\t\t\t}\n    }\n  }\n}"
+          },
+          "created":1588854692017,
+          "description":"Referência: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/search.html e https://www.elastic.co/guide/en/elasticsearch/reference/7.4/full-text-queries.html\n\n## Complemento\n- **Must**: Essa clausula deve aparecer em documentos que dão match e contribuem com o resultado final do score.\n- **Filter**: Realiza trabalho semelhante ao do must, filtra os resultados que aparecem nos documentos mas não contribui com o score.\n- **Should**: Premissas dentro do should podem aparecer em documentos que dão match, mas não é mandatório.\n- **must_not**: A Query dentro dessa clausula, removerá os documentos que deram match do resultado final.",
+          "headers":[
+             {
+                "id":"pair_8211c78c357140a088cadb48c061886f",
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588963371797.125,
+          "method":"GET",
+          "modified":1590934317609,
+          "name":"Match (text)",
+          "parameters":[
+             {
+                "description":"",
+                "disabled":true,
+                "id":"pair_6933657cbffe44fbb45dcd9c8a3e4d86",
+                "name":"filter_path",
+                "value":"hits.hits._source,hits.total.*"
+             }
+          ],
+          "parentId":"fld_581777088cf74a0eb5b717a4e46006c1",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/{% prompt 'index-name', 'Nome do índice', 'example-index-name', '', false, true %}/_doc/_search",
+          "_type":"request"
+       },
+       {
+          "_id":"req_7f90cd0c312a4c1381513507914a853f",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"_source\": {\n\t\t\"excludes\": [\"biography\"]\n\t},\n\t\"query\": {\n\t\t\"match_phrase\": {\n\t\t\t\"name\": \"user name\"\n\t\t}\n\t},\n\t\"aggs\": {\n\t\t\"States\": {\n\t\t\t\"terms\": {\n\t\t\t\t\"field\": \"address.state\"\n\t\t\t}\n\t\t}\n\t}\n}"
+          },
+          "created":1589118404366,
+          "description":"Referência: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/query-dsl-match-query-phrase.html faz uma busca considerando a frase e não somente os termos separados.",
+          "headers":[
+             {
+                "id":"pair_8211c78c357140a088cadb48c061886f",
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588963371796.7344,
+          "method":"GET",
+          "modified":1590934334819,
+          "name":"Match Phrase",
+          "parameters":[
+             {
+                "description":"",
+                "disabled":true,
+                "id":"pair_0c5f5589c567495b9997e29a66373d8a",
+                "name":"filter_path",
+                "value":"hits.hits._source,hits.total.*,aggregations"
+             }
+          ],
+          "parentId":"fld_581777088cf74a0eb5b717a4e46006c1",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/{% prompt 'index-name', 'Nome do índice', 'example-index-name', '', false, true %}/_doc/_search",
+          "_type":"request"
+       },
+       {
+          "_id":"req_82d14797379b4543bb1a9bccec43e128",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"_source\": {\n\t\t\"excludes\": [\"biography\"]\n\t},\n\t\"query\": {\n\t\t\"bool\": {\n\t\t\t\"must\": [\n\t\t\t\t{\n\t\t\t\t\t\"terms\": {\n\t\t\t\t\t\t\"skills\": [\"javascript\"]\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"filter\": [\n\t\t\t\t{\n\t\t\t\t\t\"range\": {\n\t\t\t\t\t\t\"age\": {\"gte\": 30, \"lte\": 40}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"must_not\": [\n        {\n          \"match_phrase\": {\n            \"name\": \"User Name\"\n          }\n      }]\n\t\t}\n\t},\n\t\"aggs\": {\n\t\t\"States\": {\n\t\t\t\"terms\": {\n\t\t\t\t\"field\": \"address.state\"\n\t\t\t},\n\t\t\t\"aggs\": {\n\t\t\t\t\"per_month\": {\n\t\t\t\t\t\"date_histogram\": {\n\t\t\t\t\t\t\"field\" : \"created_at\",\n\t\t\t\t\t\t\"calendar_interval\" : \"month\"\n\t\t\t\t\t},\n\t\t\t\t\t\"aggs\": {\n\t\t\t\t\t\t\"max_age\" : {\n\t\t\t\t\t\t\t\"max\" : {\n\t\t\t\t\t\t\t\t\"field\" : \"age\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n          }\n\t\t\t\t},\n\t\t\t\t\"average_user_age\": {\n\t\t\t\t\t\"avg\": {\n\t\t\t\t\t\t\"field\" : \"age\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"max_age\": {\n\t\t\t\t\t\"max_bucket\": {\n\t\t\t\t\t\t\"buckets_path\" : \"per_month>max_age\"\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t},\n\t\"size\": 5\n}"
+          },
+          "created":1589031848865,
+          "description":"Referência: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/search.html\n\nCláusula bool: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/query-dsl-bool-query.html\n\n## Complemento\n- **Must**: Essa clausula deve aparecer em documentos que dão match e contribuem com o resultado final do score.\n- **Filter**: Realiza trabalho semelhante ao do must, filtra os resultados que aparecem nos documentos mas não contribui com o score.\n- **Should**: Premissas dentro do should podem aparecer em documentos que dão match, mas não é mandatório.\n- **must_not**: A Query dentro dessa clausula, removerá os documentos que deram match do resultado final.\n\nNo lugar de filter poderiamos ter utilizado:\n```\n\"should\": [\n  {\n    \"range\": {\n      \"age\": {\"gte\": 30, \"lte\": 40}\n    }\n  }\n],\n\"minimum_should_match\": 1\n```\n> Conforme já dito `should` não é mandatório, porém, torna-se ao encontrar a clausula `minimum_should_match: 1`.",
+          "headers":[
+             {
+                "id":"pair_8211c78c357140a088cadb48c061886f",
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588963371796.3438,
+          "method":"GET",
+          "modified":1590934359688,
+          "name":"Match, filter and aggs",
+          "parameters":[
+             {
+                "description":"",
+                "disabled":true,
+                "id":"pair_3c368e23c8154137b395f9e5b798e667",
+                "name":"filter_path",
+                "value":"hits.hits._source,hits.total.*,aggregations"
+             }
+          ],
+          "parentId":"fld_581777088cf74a0eb5b717a4e46006c1",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/{% prompt 'index-name', 'Nome do índice', 'example-index-name', '', false, true %}/_doc/_search",
+          "_type":"request"
+       },
+       {
+          "_id":"req_1473a58128254f86bc42cd12631a459c",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"_source\": {\n\t\t\"excludes\": [\"biography\"]\n\t},\n\t\"query\": {\n    \"multi_match\" : {\n      \"query\" : \"Brooklyn\",\n      \"fields\" : [ \"address.city\", \"address.street\" ] \n    }\n  }\n}"
+          },
+          "created":1589035373103,
+          "description":"Referência: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/search.html\n\nCláusula bool: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/query-dsl-bool-query.html",
+          "headers":[
+             {
+                "id":"pair_8211c78c357140a088cadb48c061886f",
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588963371795.9531,
+          "method":"GET",
+          "modified":1590934385808,
+          "name":"Multi-match",
+          "parameters":[
+             {
+                "description":"",
+                "disabled":true,
+                "id":"pair_00c3d14d7515457abc0ffa4d3715ed9e",
+                "name":"filter_path",
+                "value":"hits.hits._source,hits.total.*"
+             }
+          ],
+          "parentId":"fld_581777088cf74a0eb5b717a4e46006c1",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/{% prompt 'index-name', 'Nome do índice', 'example-index-name', '', false, true %}/_doc/_search",
+          "_type":"request"
+       },
+       {
+          "_id":"req_a9c59cd14a344b928afc4a60654262b7",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"_source\": [\"name\", \"email\", \"skills\", \"salary\"],\n  \"query\": {\n    \"bool\": {\n      \"must\": {\n        \"match_all\": {}\n      }\n    }\n  },\n\t\"sort\": [\n\t\t{\n\t\t\t\"created_at\": \"desc\"\n\t\t}\n\t]\n}\n"
+          },
+          "created":1588997283035,
+          "description":"Referência: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/search.html e https://www.elastic.co/guide/en/elasticsearch/reference/7.4/query-dsl-bool-query.html",
+          "headers":[
+             {
+                "id":"pair_8211c78c357140a088cadb48c061886f",
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588963371795.5625,
+          "method":"GET",
+          "modified":1590934416823,
+          "name":"Return all",
+          "parameters":[
+             {
+                "description":"",
+                "disabled":true,
+                "id":"pair_4db45541a75b4a9cb20dbda9f16fec20",
+                "name":"filter_path",
+                "value":"hits.hits._source,hits.total.*"
+             },
+             {
+                "description":"",
+                "disabled":true,
+                "id":"pair_3a605a3aad4d49bf9c527c0a87e87ef2",
+                "name":"_source",
+                "value":"*"
+             }
+          ],
+          "parentId":"fld_581777088cf74a0eb5b717a4e46006c1",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/{% prompt 'index-name', 'Nome do índice', 'example-index-name', '', false, true %}/_search",
+          "_type":"request"
+       },
+       {
+          "_id":"req_22b88668a1ee4d77bd840a956f1b3d5a",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n  \"query\": {\n    \"term\": {\n      \"email\": \"user@example.com\"\n    }\n  }\n}"
+          },
+          "created":1588961940470,
+          "description":"Permite criar ou atualizar um documento.\n\n## Query Params\n\n###  op_type\nQuando definido como `create` a transação irá falhar caso o documento já exista.",
+          "headers":[
+             {
+                "id":"pair_3775a4d49e0343b2b729d8e9ce9cc947",
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588854606441,
+          "method":"POST",
+          "modified":1590527031835,
+          "name":"Delete by query",
+          "parameters":[
+
+          ],
+          "parentId":"fld_d4bfb2d2cd034729a43cf7ad72f91d72",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/{% prompt 'index-name', 'Nome do índice', '', '', false, false %}/_delete_by_query",
+          "_type":"request"
+       },
+       {
+          "_id":"req_348d246d9e8745adb0de0e452026a88a",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1589066367650,
+          "description":"Permite criar ou atualizar um documento.\n\n## Query Params\n\n###  op_type\nQuando definido como `create` a transação irá falhar caso o documento já exista.",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1587787868308.053,
+          "method":"DELETE",
+          "modified":1589066367650,
+          "name":"Destroy",
+          "parameters":[
+
+          ],
+          "parentId":"fld_d4bfb2d2cd034729a43cf7ad72f91d72",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/{% prompt 'index-name', 'Nome do índice', '', '', false, false %}/_doc/{% prompt 'id', 'ID do registro', '', '', false, false %}",
+          "_type":"request"
+       },
+       {
+          "_id":"req_8a31a249334045969f326cdfb9ea3b60",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1588897013185,
+          "description":"",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588897013185,
+          "method":"GET",
+          "modified":1588961836419,
+          "name":"List",
+          "parameters":[
+             {
+                "description":"",
+                "disabled":false,
+                "id":"pair_a40b8cbd24bb48ce838713fc43a4a898",
+                "name":"detailed",
+                "value":"true"
+             },
+             {
+                "description":"",
+                "disabled":true,
+                "id":"pair_72795f7eb8324b44a9f43caeb7fa9a6b",
+                "name":"actions",
+                "value":"*reindex"
+             }
+          ],
+          "parentId":"fld_4d040cd2934c49e0aa1afe859e9e0f49",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_tasks",
+          "_type":"request"
+       },
+       {
+          "_id":"fld_4d040cd2934c49e0aa1afe859e9e0f49",
+          "created":1588854783710,
+          "description":"",
+          "environment":{
+
+          },
+          "environmentPropertyOrder":null,
+          "metaSortKey":-1588854783711,
+          "modified":1588854783710,
+          "name":"Tasks",
+          "parentId":"wrk_af7d97f6c23c4ea9a0c7716acfd78f82",
+          "_type":"request_group"
+       },
+       {
+          "_id":"req_287de724dc224c7eb0a0b2428aa192d7",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1590933521578,
+          "description":"",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588891748110.8125,
+          "method":"GET",
+          "modified":1590933587717,
+          "name":"Pending",
+          "parameters":[
+
+          ],
+          "parentId":"fld_4d040cd2934c49e0aa1afe859e9e0f49",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_cluster/pending_tasks",
+          "_type":"request"
+       },
+       {
+          "_id":"req_eb949d9cbc804782972839857c3dc3d4",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1588962316050,
+          "description":"",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588886483036.625,
+          "method":"POST",
+          "modified":1590965213601,
+          "name":"Cancel",
+          "parameters":[
+             {
+                "description":"",
+                "disabled":true,
+                "id":"pair_2e1fb89818b7416fb60523f336a69709",
+                "name":"nodes",
+                "value":"node1,node2"
+             }
+          ],
+          "parentId":"fld_4d040cd2934c49e0aa1afe859e9e0f49",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_tasks/{% prompt 'node_id:task_id', 'ID absoluto da tarefa (formato: node_id:task_id)', '', '', false, false %}/_cancel",
+          "_type":"request"
+       },
+       {
+          "_id":"req_2f1fcff941d64260a328644fb3e2263e",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1590965002863,
+          "description":"",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588883850499.5312,
+          "method":"POST",
+          "modified":1590965196782,
+          "name":"Cancel all",
+          "parameters":[
+             {
+                "description":"",
+                "disabled":false,
+                "id":"pair_240e812b484b4bf3b1b24139125b6243",
+                "name":"nodes",
+                "value":"node1,node2"
+             },
+             {
+                "description":"",
+                "disabled":false,
+                "id":"pair_2fd8645b6200455fb58697f45a17c2c9",
+                "name":"actions",
+                "value":"*reindex"
+             }
+          ],
+          "parentId":"fld_4d040cd2934c49e0aa1afe859e9e0f49",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_tasks/_cancel",
+          "_type":"request"
+       },
+       {
+          "_id":"req_9db19fcaf559455da4d5ef21a758e0af",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n  \"source\": {\n    \"index\": \"{% prompt 'source-index-name', 'Nome do índice de origem', '', '', false, false %}\"\n  },\n  \"dest\": {\n    \"index\": \"{% prompt 'target-index-name', 'Target index name', '', '', false, false %}\"\n  }\n}"
+          },
+          "created":1588962133146,
+          "description":"",
+          "headers":[
+             {
+                "id":"pair_484b6002116945f8a7fcea11bfc73585",
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588875952888.25,
+          "method":"POST",
+          "modified":1590965782063,
+          "name":"Reindex",
+          "parameters":[
+             {
+                "description":"",
+                "id":"pair_7f83c0005716491687b0f8b570243feb",
+                "name":"slices",
+                "value":"5"
+             },
+             {
+                "description":"",
+                "disabled":true,
+                "id":"pair_1f5f9edfc33d433e89a0aaf665812b23",
+                "name":"refresh",
+                "value":""
+             }
+          ],
+          "parentId":"fld_4d040cd2934c49e0aa1afe859e9e0f49",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_reindex",
+          "_type":"request"
+       },
+       {
+          "_id":"req_ddc121b47ff640189abd982395ad5875",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"policy\": {\n\t\t\"phases\": {\n\t\t\t\"delete\": {\n\t\t\t\t\"min_age\": \"30d\",\n\t\t\t\t\"actions\": {\n\t\t\t\t\t\"delete\": {}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}"
+          },
+          "created":1588857397597,
+          "description":"A criação de política faz parte do pacote X-PACK. Referência: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/ilm-put-lifecycle.html",
+          "headers":[
+             {
+                "id":"pair_2fb61bab8f914a53abab0ad0ae62ed5d",
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1586721130175.106,
+          "method":"PUT",
+          "modified":1590934445571,
+          "name":"Create",
+          "parameters":[
+
+          ],
+          "parentId":"fld_f29120e04a31440cb18261502300055c",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_ilm/policy/{% prompt 'policy-name', 'Nome da política', '', '', false, false %}",
+          "_type":"request"
+       },
+       {
+          "_id":"fld_f29120e04a31440cb18261502300055c",
+          "created":1588857413340,
+          "description":"",
+          "environment":{
+
+          },
+          "environmentPropertyOrder":null,
+          "metaSortKey":-1588854735767.75,
+          "modified":1590581012958,
+          "name":"Policy (ILM)",
+          "parentId":"wrk_af7d97f6c23c4ea9a0c7716acfd78f82",
+          "_type":"request_group"
+       },
+       {
+          "_id":"req_6b1421e05f3943ca91c7eb31d37d6690",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1588857387421,
+          "description":"A criação de política faz parte do pacote X-PACK. Referência: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/ilm-put-lifecycle.html",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1586721130125.106,
+          "method":"GET",
+          "modified":1590934461799,
+          "name":"List",
+          "parameters":[
+
+          ],
+          "parentId":"fld_f29120e04a31440cb18261502300055c",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_ilm/policy",
+          "_type":"request"
+       },
+       {
+          "_id":"req_aa739a1a21dd4a22806fa0700afcbe06",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1590525897086,
+          "description":"A criação de política faz parte do pacote X-PACK. Referência: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/ilm-put-lifecycle.html",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1586720916506.6323,
+          "method":"GET",
+          "modified":1590934480931,
+          "name":"Status ILM",
+          "parameters":[
+
+          ],
+          "parentId":"fld_f29120e04a31440cb18261502300055c",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_ilm/status",
+          "_type":"request"
+       },
+       {
+          "_id":"req_de0dd238c71d4a12a306dae5e4a71c79",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1588857674590,
+          "description":"A criação de política faz parte do pacote X-PACK. Referência: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/ilm-put-lifecycle.html",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1586720889804.3232,
+          "method":"GET",
+          "modified":1590934500499,
+          "name":"Show",
+          "parameters":[
+
+          ],
+          "parentId":"fld_f29120e04a31440cb18261502300055c",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_ilm/policy/{% prompt 'policy-name', 'Nome da política', 'example-policy-name', '', false, true %}",
+          "_type":"request"
+       },
+       {
+          "_id":"req_46659d7ffa3b4f48b7076caf82cd6108",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1590534777763,
+          "description":"A criação de política faz parte do pacote X-PACK. Referência: \nhttps://www.elastic.co/guide/en/elasticsearch/reference/7.4/ilm-put-lifecycle.html",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1586720876453.1685,
+          "method":"GET",
+          "modified":1590934511669,
+          "name":"Explain",
+          "parameters":[
+
+          ],
+          "parentId":"fld_f29120e04a31440cb18261502300055c",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/{% prompt 'index-name', 'Nome do índice', 'example-index-name', '', false, true %}/_ilm/explain",
+          "_type":"request"
+       },
+       {
+          "_id":"req_471ffae23cbd4e4bb28f4de61a5e4fc5",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n  \"current_step\": { \n    \"phase\": \"new\",\n    \"action\": \"complete\",\n    \"name\": \"complete\"\n  },\n  \"next_step\": { \n    \"phase\": \"delete\",\n    \"action\": \"delete\",\n    \"name\": \"delete\"\n  }\n}"
+          },
+          "created":1590582208004,
+          "description":"A criação de política faz parte do pacote X-PACK. Referência: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/ilm-put-lifecycle.html",
+          "headers":[
+             {
+                "id":"pair_2fb61bab8f914a53abab0ad0ae62ed5d",
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1586720869777.5913,
+          "method":"POST",
+          "modified":1590934518714,
+          "name":"Move next step",
+          "parameters":[
+
+          ],
+          "parentId":"fld_f29120e04a31440cb18261502300055c",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_ilm/move/{% prompt 'index-name', 'Nome do índice', '', '', false, false %}",
+          "_type":"request"
+       },
+       {
+          "_id":"req_c52ccacb54ab4c658463deec97351513",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1590526544918,
+          "description":"A criação de política faz parte do pacote X-PACK. Referência: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/ilm-put-lifecycle.html",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1586720863102.014,
+          "method":"POST",
+          "modified":1590934525890,
+          "name":"Start ILM",
+          "parameters":[
+
+          ],
+          "parentId":"fld_f29120e04a31440cb18261502300055c",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_ilm/start",
+          "_type":"request"
+       },
+       {
+          "_id":"req_8ad86dae702848bda85982140a0bc798",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1590526520822,
+          "description":"A criação de política faz parte do pacote X-PACK. Referência: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/ilm-put-lifecycle.html",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1586720809697.3955,
+          "method":"POST",
+          "modified":1590934530342,
+          "name":"Stop ILM",
+          "parameters":[
+
+          ],
+          "parentId":"fld_f29120e04a31440cb18261502300055c",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_ilm/stop",
+          "_type":"request"
+       },
+       {
+          "_id":"req_56f0af1753ff4939b562995fcea342ca",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1588859909909,
+          "description":"A criação de política faz parte do pacote X-PACK. Referência: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/ilm-put-lifecycle.html",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1586720489269.6855,
+          "method":"DELETE",
+          "modified":1590934534806,
+          "name":"Destroy",
+          "parameters":[
+
+          ],
+          "parentId":"fld_f29120e04a31440cb18261502300055c",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_ilm/policy/{% prompt 'policy-name', 'Nome da política', '', '', false, false %}",
+          "_type":"request"
+       },
+       {
+          "_id":"req_922ca042c73f42a79162e39ee2741c1d",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1589131406129,
+          "description":"",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588963823759.5,
+          "method":"GET",
+          "modified":1589132241796,
+          "name":"Authenticate",
+          "parameters":[
+
+          ],
+          "parentId":"fld_7876d24ade36401bbcfcf1a2d9224b1c",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_security/_authenticate",
+          "_type":"request"
+       },
+       {
+          "_id":"fld_7876d24ade36401bbcfcf1a2d9224b1c",
+          "created":1589131469439,
+          "description":"",
+          "environment":{
+
+          },
+          "environmentPropertyOrder":null,
+          "metaSortKey":-1588854723781.9375,
+          "modified":1589820015950,
+          "name":"Security",
+          "parentId":"wrk_af7d97f6c23c4ea9a0c7716acfd78f82",
+          "_type":"request_group"
+       },
+       {
+          "_id":"req_c65669b48a50441bb6e5631d1c109fc0",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1589132642290,
+          "description":"Recupera a lista de privilégios de cluster e de índice disponíveis nesta versão do Elasticsearch.",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588963823756.375,
+          "method":"GET",
+          "modified":1589132740852,
+          "name":"Get builtin privileges",
+          "parameters":[
+
+          ],
+          "parentId":"fld_7876d24ade36401bbcfcf1a2d9224b1c",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_security/privilege/_builtin",
+          "_type":"request"
+       },
+       {
+          "_id":"req_9ca778661e934359b57cb3f53daf4e01",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1589132796738,
+          "description":"",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588963823754.8125,
+          "method":"GET",
+          "modified":1589132838638,
+          "name":"SSL certificate",
+          "parameters":[
+
+          ],
+          "parentId":"fld_7876d24ade36401bbcfcf1a2d9224b1c",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_ssl/certificates",
+          "_type":"request"
+       },
+       {
+          "_id":"req_ee0dd691d9d24dfc92b5895fb0e8c861",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n  \"cluster\": [ \"all\", \"monitor\", \"manage\" ],\n  \"index\" : [\n    {\n      \"names\": [ \"create_index\", \"delete_index\", \"monitor\" ],\n      \"privileges\": [ \"read\", \"write\" ]\n    }\n  ]\n}"
+          },
+          "created":1589131651547,
+          "description":"Referência: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/security-api-has-privileges.html\n\nLista de privilégios passíveis de consulta: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/security-privileges.html",
+          "headers":[
+             {
+                "id":"pair_56253fed47c84ec3b94fe5c8b5fa53fe",
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588963823753.25,
+          "method":"GET",
+          "modified":1590934574210,
+          "name":"Has privileges",
+          "parameters":[
+
+          ],
+          "parentId":"fld_7876d24ade36401bbcfcf1a2d9224b1c",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_security/user/_has_privileges",
+          "_type":"request"
+       },
+       {
+          "_id":"req_3a6ff508e8bc4df5ac2f69772b50af21",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"full_name\" : \"User Name\",\n  \"email\" : \"user@example.com\",\n  \"password\" : \"example-password\",\n  \"roles\" : [ \"admin\" ],\n  \"metadata\" : {\n    \"member_team\" : \"Team name\"\n  }\n}"
+          },
+          "created":1589133548821,
+          "description":"",
+          "headers":[
+             {
+                "id":"pair_8cbce1313c2d40298b0874ca299eb869",
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588963823807.9375,
+          "method":"POST",
+          "modified":1589133832672,
+          "name":"Create",
+          "parameters":[
+             {
+                "description":"",
+                "id":"pair_32ce1248598745feb344a479eef9ba93",
+                "name":"refresh",
+                "value":"true"
+             }
+          ],
+          "parentId":"fld_a4c3f0ecd9a24385a4ffe211d0db0a8e",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_security/user/{% prompt 'username', 'Informe o nome do usuário a ser criado', '', '', false, false %}",
+          "_type":"request"
+       },
+       {
+          "_id":"fld_a4c3f0ecd9a24385a4ffe211d0db0a8e",
+          "created":1589133378977,
+          "description":"",
+          "environment":{
+
+          },
+          "environmentPropertyOrder":null,
+          "metaSortKey":-1588963823740.75,
+          "modified":1589141257768,
+          "name":"User",
+          "parentId":"fld_7876d24ade36401bbcfcf1a2d9224b1c",
+          "_type":"request_group"
+       },
+       {
+          "_id":"req_3baebf3f26ce417a9c2c872c0b607c9e",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"full_name\" : \"User Name2\",\n  \"email\" : \"user@example.com\",\n  \"password\" : \"example-password\",\n  \"roles\" : [ \"admin\" ],\n  \"metadata\" : {\n    \"member_team\" : \"Team name\"\n  }\n}"
+          },
+          "created":1589134195842,
+          "description":"",
+          "headers":[
+             {
+                "id":"pair_8cbce1313c2d40298b0874ca299eb869",
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588963823783.7188,
+          "method":"PUT",
+          "modified":1589141019065,
+          "name":"Create/Update",
+          "parameters":[
+             {
+                "description":"",
+                "id":"pair_32ce1248598745feb344a479eef9ba93",
+                "name":"refresh",
+                "value":"true"
+             }
+          ],
+          "parentId":"fld_a4c3f0ecd9a24385a4ffe211d0db0a8e",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_security/user/{% prompt 'username', 'Informe o nome do usuário a ser criado ou atualizado', '', '', false, false %}",
+          "_type":"request"
+       },
+       {
+          "_id":"req_9df4101c321e4874ad3750186555ed34",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n  \"password\" : \"password-here\"\n}"
+          },
+          "created":1589140952593,
+          "description":"Em caso de sucesso irá retornar um JSON vazio",
+          "headers":[
+             {
+                "id":"pair_8cbce1313c2d40298b0874ca299eb869",
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588963823777.2734,
+          "method":"POST",
+          "modified":1589142476548,
+          "name":"Change password",
+          "parameters":[
+             {
+                "description":"",
+                "id":"pair_32ce1248598745feb344a479eef9ba93",
+                "name":"refresh",
+                "value":"true"
+             }
+          ],
+          "parentId":"fld_a4c3f0ecd9a24385a4ffe211d0db0a8e",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_security/user/{% prompt 'username', 'Informe o nome do usuário a ter a senha alterada', '', '', false, false %}/_password",
+          "_type":"request"
+       },
+       {
+          "_id":"req_d13bd69c429c4c73bfdc0ecf05ffdb39",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1589140703093,
+          "description":"",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588963823770.8281,
+          "method":"PUT",
+          "modified":1589141060038,
+          "name":"Disable",
+          "parameters":[
+
+          ],
+          "parentId":"fld_a4c3f0ecd9a24385a4ffe211d0db0a8e",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_security/user/{% prompt 'username', 'Informe o usuário que deve ser inativado', '', '', false, false %}/_disable",
+          "_type":"request"
+       },
+       {
+          "_id":"req_309e8ea24b9f4dd2b7f10aa601c5775f",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1589140834505,
+          "description":"",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588963823765.164,
+          "method":"PUT",
+          "modified":1589141073977,
+          "name":"Enable",
+          "parameters":[
+
+          ],
+          "parentId":"fld_a4c3f0ecd9a24385a4ffe211d0db0a8e",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_security/user/{% prompt 'username', 'Informe o nome do usuário que deve ser reativado', '', '', false, false %}/_enable",
+          "_type":"request"
+       },
+       {
+          "_id":"req_13bed6035d414cfaabd28876a93ba572",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1589133387137,
+          "description":"",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588963823757.9375,
+          "method":"GET",
+          "modified":1589133469682,
+          "name":"Show/List",
+          "parameters":[
+
+          ],
+          "parentId":"fld_a4c3f0ecd9a24385a4ffe211d0db0a8e",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_security/user/{% prompt 'username', 'Informe o nome do usuário ou deixe em branco para listar todos', '', '', false, false %}",
+          "_type":"request"
+       },
+       {
+          "_id":"req_904fb353fc75444ebdb3e7231ed66105",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1589134330156,
+          "description":"",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588963823707.9375,
+          "method":"DELETE",
+          "modified":1589141138725,
+          "name":"Destroy",
+          "parameters":[
+             {
+                "description":"",
+                "id":"pair_32ce1248598745feb344a479eef9ba93",
+                "name":"refresh",
+                "value":"true"
+             }
+          ],
+          "parentId":"fld_a4c3f0ecd9a24385a4ffe211d0db0a8e",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_security/user/{% prompt 'username', 'Informe o nome do usuário que deve ter seu cadastro excluído', '', '', false, false %}",
+          "_type":"request"
+       },
+       {
+          "_id":"req_4920696055ea40bf82b2854f53806513",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n  \"cluster\": [\"all\"],\n  \"indices\": [\n    {\n      \"names\": [ \"index1\", \"index2\" ],\n      \"privileges\": [\"all\"]\n    }\n  ],\n  \"applications\": [\n    {\n      \"application\": \"myapp\",\n      \"privileges\": [ \"admin\", \"read\" ],\n      \"resources\": [ \"*\" ]\n    }\n  ],\n  \"run_as\": [ \"other_user\" ], // optional\n  \"metadata\" : { // optional\n    \"version\" : 1\n  }\n}"
+          },
+          "created":1589141368925,
+          "description":"Referência: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/security-api.html#security-role-apis",
+          "headers":[
+             {
+                "id":"pair_172abd900bc445fdbff82f75870f15a0",
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588963823845.8281,
+          "method":"POST",
+          "modified":1590934599740,
+          "name":"Create",
+          "parameters":[
+
+          ],
+          "parentId":"fld_1974154b32454a789119a914f4ae46f1",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_security/role/{% prompt 'username', 'Informe o nome da política ou deixe em branco para listar todas', '', '', false, false %}",
+          "_type":"request"
+       },
+       {
+          "_id":"fld_1974154b32454a789119a914f4ae46f1",
+          "created":1589141250938,
+          "description":"",
+          "environment":{
+
+          },
+          "environmentPropertyOrder":null,
+          "metaSortKey":-1588963823728.25,
+          "modified":1589141254158,
+          "name":"Roles",
+          "parentId":"fld_7876d24ade36401bbcfcf1a2d9224b1c",
+          "_type":"request_group"
+       },
+       {
+          "_id":"req_47969a6780094a94a21323b2090f83cb",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n  \"cluster\": [\"all\"],\n  \"indices\": [\n    {\n      \"names\": [ \"example1\", \"example2\" ],\n      \"privileges\": [\"all\"]\n    }\n  ],\n  \"applications\": [\n    {\n      \"application\": \"myapp\",\n      \"privileges\": [ \"admin\", \"read\" ],\n      \"resources\": [ \"*\" ]\n    }\n  ],\n  \"run_as\": [ \"other_user\" ], // optional\n  \"metadata\" : { // optional\n    \"version\" : 1\n  }\n}"
+          },
+          "created":1589141502025,
+          "description":"Referência: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/security-api.html#security-role-apis",
+          "headers":[
+             {
+                "id":"pair_172abd900bc445fdbff82f75870f15a0",
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588963823826.8828,
+          "method":"PUT",
+          "modified":1590934616467,
+          "name":"Update",
+          "parameters":[
+
+          ],
+          "parentId":"fld_1974154b32454a789119a914f4ae46f1",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_security/role/{% prompt 'username', 'Informe o nome da política ou deixe em branco para listar todas', '', '', false, false %}",
+          "_type":"request"
+       },
+       {
+          "_id":"req_c881b36f3b27489bb259d3ce0629f1b8",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1589141265553,
+          "description":"Referência: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/security-api.html#security-role-apis",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588963823795.8281,
+          "method":"GET",
+          "modified":1590934633287,
+          "name":"List/Show",
+          "parameters":[
+
+          ],
+          "parentId":"fld_1974154b32454a789119a914f4ae46f1",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_security/role/{% prompt 'username', 'Informe o nome da política ou deixe em branco para listar todas', '', '', false, false %}",
+          "_type":"request"
+       },
+       {
+          "_id":"req_9985c69f0df5411a864fe9e7237edb24",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1589141606757,
+          "description":"Referência: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/security-api.html#security-role-apis",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588963823792.8008,
+          "method":"POST",
+          "modified":1590934640342,
+          "name":"Clear cache",
+          "parameters":[
+
+          ],
+          "parentId":"fld_1974154b32454a789119a914f4ae46f1",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_security/role/{% prompt 'username', 'Informe o nome da política ou deixe em branco para listar todas', '', '', false, false %}/_clear_cache",
+          "_type":"request"
+       },
+       {
+          "_id":"req_5af726af276a456c8fa0b84db30f7c90",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1589141576987,
+          "description":"Referência: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/security-api.html#security-role-apis",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1588963823789.7734,
+          "method":"DELETE",
+          "modified":1590934648360,
+          "name":"Destroy",
+          "parameters":[
+
+          ],
+          "parentId":"fld_1974154b32454a789119a914f4ae46f1",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_security/role/{% prompt 'username', 'Informe o nome da política ou deixe em branco para listar todas', '', '', false, false %}",
+          "_type":"request"
+       },
+       {
+          "_id":"req_5285c02f6d8940138c59c939406913fe",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n  \"type\" : \"fs\",\n  \"settings\": {\n    \"location\": \"/path/to/snapshot/repository\",\n\t\t\"compress\": true\n  }\n}"
+          },
+          "created":1589815563037,
+          "description":"Referência: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/snapshots-register-repository.html\n\nÉ necessário editar o elasticsearch.yml e registrar o repositório de destino do snapshot. Exemplo:\n```\npath.repo: \"/path/to/snapshot/repository\"\n```",
+          "headers":[
+             {
+                "id":"pair_2d8f0d351e3346ac91adf8ad1d332e71",
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1589131469526.5,
+          "method":"PUT",
+          "modified":1590934658927,
+          "name":"Create/Update",
+          "parameters":[
+
+          ],
+          "parentId":"fld_42c8443ae8f34735964a184ab3cfa931",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_snapshot/{% prompt 'repository-name', 'Nome do repositório', '', '', false, true %}",
+          "_type":"request"
+       },
+       {
+          "_id":"fld_42c8443ae8f34735964a184ab3cfa931",
+          "created":1589817927660,
+          "description":"",
+          "environment":{
+
+          },
+          "environmentPropertyOrder":null,
+          "metaSortKey":-1589817971939,
+          "modified":1589818004982,
+          "name":"Repository",
+          "parentId":"fld_082fc4b97655483eb1722aaea7ef0fa9",
+          "_type":"request_group"
+       },
+       {
+          "_id":"fld_082fc4b97655483eb1722aaea7ef0fa9",
+          "created":1589815457714,
+          "description":"",
+          "environment":{
+
+          },
+          "environmentPropertyOrder":null,
+          "metaSortKey":-1588854711796.125,
+          "modified":1589819994738,
+          "name":"Backup/Restore",
+          "parentId":"wrk_af7d97f6c23c4ea9a0c7716acfd78f82",
+          "_type":"request_group"
+       },
+       {
+          "_id":"req_9d7cfafdf3eb4182a6c299f128691d54",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1589816280018,
+          "description":"",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1589131469501.5,
+          "method":"POST",
+          "modified":1589819420593,
+          "name":"Cleanup",
+          "parameters":[
+
+          ],
+          "parentId":"fld_42c8443ae8f34735964a184ab3cfa931",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_snapshot/{% prompt 'repository-name', 'Nome do repositório', '', '', false, false %}/_cleanup",
+          "_type":"request"
+       },
+       {
+          "_id":"req_84f4bf5c0f6a4ab48b3a0b86ff363745",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1589851392385,
+          "description":"",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1589131469496.8125,
+          "method":"POST",
+          "modified":1589851404852,
+          "name":"Verify",
+          "parameters":[
+
+          ],
+          "parentId":"fld_42c8443ae8f34735964a184ab3cfa931",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_snapshot/{% prompt 'repository-name', 'Nome do repositório', '', '', false, false %}/_verify",
+          "_type":"request"
+       },
+       {
+          "_id":"req_0a41755dda24462ea540f87dc2e46e46",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1589815414216,
+          "description":"",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1589131469476.5,
+          "method":"GET",
+          "modified":1589817929868,
+          "name":"List/Show",
+          "parameters":[
+
+          ],
+          "parentId":"fld_42c8443ae8f34735964a184ab3cfa931",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_snapshot/{% prompt 'repository-name', 'Nome do repositório (Informe \"_all\" ou deixe em branco para listar todos)', '_all', '', false, false %}",
+          "_type":"request"
+       },
+       {
+          "_id":"req_183112b6b12b4d82b65b49142eda2ad5",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1589819817999,
+          "description":"",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1589131469426.5,
+          "method":"DELETE",
+          "modified":1589819823132,
+          "name":"Destroy",
+          "parameters":[
+
+          ],
+          "parentId":"fld_42c8443ae8f34735964a184ab3cfa931",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_snapshot/{% prompt 'repository-name', 'Nome do repositório', '', '', false, false %}",
+          "_type":"request"
+       },
+       {
+          "_id":"req_6c12a6e1a1b9434faa6f3bb4ab851820",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n  \"indices\": \"example1,example2\",\n\t\"ignore_unavailable\": false,\n  \"include_global_state\": false,\n\t \"metadata\": {\n    \"taken_by\": \"User name\",\n    \"taken_because\": \"Backup before upgrading\"\n  }\n}"
+          },
+          "created":1589816016882,
+          "description":"",
+          "headers":[
+             {
+                "id":"pair_2d8f0d351e3346ac91adf8ad1d332e71",
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1589131469542.125,
+          "method":"PUT",
+          "modified":1589819525198,
+          "name":"Backup",
+          "parameters":[
+             {
+                "description":"",
+                "id":"pair_38080bc6dcc140b19ecfb727637c2a32",
+                "name":"wait_for_completion",
+                "value":"true"
+             }
+          ],
+          "parentId":"fld_f35392f4cb584018bba5dee2405e9483",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_snapshot/{% prompt 'repository-name', 'Nome do repositório de backup', '', '', false, false %}/{% prompt 'snapshot-name', 'Nome a ser atribuido ao snapshot', '', '', false, false %}",
+          "_type":"request"
+       },
+       {
+          "_id":"fld_f35392f4cb584018bba5dee2405e9483",
+          "created":1589817971889,
+          "description":"",
+          "environment":{
+
+          },
+          "environmentPropertyOrder":null,
+          "metaSortKey":-1589817971889,
+          "modified":1589817971889,
+          "name":"Snapshot",
+          "parentId":"fld_082fc4b97655483eb1722aaea7ef0fa9",
+          "_type":"request_group"
+       },
+       {
+          "_id":"req_85551d9feb3649a0b937b6405cd133f1",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1589818183332,
+          "description":"Referência: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/snapshots-restore-snapshot.html\n\nUma requisição sem corpo irá recuperar todos os índices contidos no snapshot informado. Para recuperar índices especificos e/ou alterar seu nome de importação considere este exemplo:\n```\n{\n  \"indices\": \"index_1,index_2\",\n  \"ignore_unavailable\": true,\n  \"include_global_state\": true,\n  \"rename_pattern\": \"index_(.+)\",\n  \"rename_replacement\": \"restored_index_$1\"\n}\n```",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1589131469492.125,
+          "method":"POST",
+          "modified":1590934670136,
+          "name":"Restore",
+          "parameters":[
+
+          ],
+          "parentId":"fld_f35392f4cb584018bba5dee2405e9483",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_snapshot/{% prompt 'repository-name', 'Nome do repositório', '', '', false, false %}/{% prompt 'snapshot-name', 'Nome do snapshot', '', '', false, false %}/_restore",
+          "_type":"request"
+       },
+       {
+          "_id":"req_bd85238e2deb4ae487c8f9818525be66",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1589816756456,
+          "description":"",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1589131469442.125,
+          "method":"GET",
+          "modified":1589818457300,
+          "name":"Details",
+          "parameters":[
+
+          ],
+          "parentId":"fld_f35392f4cb584018bba5dee2405e9483",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_snapshot/{% prompt 'repository-name', 'Nome do repositório', '', '', false, false %}/{% prompt 'snapshot-name', 'Nome do snapshot (Utilize \"_current\" para lsitar snapshot em andamento)', '_all', '', false, false %}",
+          "_type":"request"
+       },
+       {
+          "_id":"req_5d6e4e855c85402283788fe23895a9e4",
+          "authentication":{
+             "disabled":false,
+             "password":"{{ password  }}",
+             "type":"basic",
+             "username":"{{ username  }}"
+          },
+          "body":{
+
+          },
+          "created":1589816513638,
+          "description":"",
+          "headers":[
+
+          ],
+          "isPrivate":false,
+          "metaSortKey":-1589131469417.125,
+          "method":"DELETE",
+          "modified":1589819747684,
+          "name":"Destroy",
+          "parameters":[
+
+          ],
+          "parentId":"fld_f35392f4cb584018bba5dee2405e9483",
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingFollowRedirects":"global",
+          "settingRebuildPath":true,
+          "settingSendCookies":true,
+          "settingStoreCookies":true,
+          "url":"{{ baseURL  }}/_snapshot/{% prompt 'repository-name', 'Nome do repositório', '', '', false, false %}/{% prompt 'snapshot-name', 'Nome do snapshot', '', '', false, false %}",
+          "_type":"request"
+       },
+       {
+          "_id":"env_286a5b26570fb805ae540ce33c7d03bff3c8beab",
+          "color":null,
+          "created":1588854419431,
+          "data":{
+
+          },
+          "dataPropertyOrder":{
+
+          },
+          "isPrivate":false,
+          "metaSortKey":1588854419431,
+          "modified":1588974713442,
+          "name":"Base Environment",
+          "parentId":"wrk_af7d97f6c23c4ea9a0c7716acfd78f82",
+          "_type":"environment"
+       },
+       {
+          "_id":"jar_286a5b26570fb805ae540ce33c7d03bff3c8beab",
+          "cookies":[
+
+          ],
+          "created":1588854419453,
+          "modified":1590760520314,
+          "name":"Default Jar",
+          "parentId":"wrk_af7d97f6c23c4ea9a0c7716acfd78f82",
+          "_type":"cookie_jar"
+       },
+       {
+          "_id":"env_02a1c3dabcd740559951dae585dfd7a7",
+          "color":"#00ff00",
+          "created":1588854509377,
+          "data":{
+             "baseURL":"http://localhost:9200",
+             "password":"",
+             "username":""
+          },
+          "dataPropertyOrder":{
+             "&":[
+                "baseURL",
+                "username",
+                "password"
+             ]
+          },
+          "isPrivate":false,
+          "metaSortKey":2,
+          "modified":1589142612471,
+          "name":"Development",
+          "parentId":"env_286a5b26570fb805ae540ce33c7d03bff3c8beab",
+          "_type":"environment"
+       }
+    ]
+ }
