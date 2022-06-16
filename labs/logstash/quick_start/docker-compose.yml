@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  logstash:
+    container_name: logstash
+    image: docker.elastic.co/logstash/logstash:8.2.3
+    tty: true
+    working_dir: /data
+    volumes:
+      - ./data/:/data
+      - ./config:/usr/share/logstash/config
+      - ./pipeline:/usr/share/logstash/pipeline
