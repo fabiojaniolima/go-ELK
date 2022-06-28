@@ -25,6 +25,23 @@ Não existe um valor ideal para o tamanho dos shards ou quantidade, mas existem 
 
 Referência: https://www.elastic.co/guide/en/elasticsearch/reference/current/scalability.html
 
+## Segmentos e mesclagem
+
+O número de segmentos tem impacto direto na performance de busca e indexação de dados. Quanto maior o número de segmentos mais poder de indexação você terá, porém, mais lenta serão as queries (consultas), logo, quanto menor o número de segmentos mais performance as queries terão.
+
+Resumo:
+  - *Mais segmentos*: maior poder de indexão e maior consumo de memória (RAM). Os segmentos possuem estados/metadados que precisam ser mantidos em memória
+  - *Menos segmentos*: mais poder de busca e maior consumo de CPU. Menos segmentos pode significar mais operações de mesclagem em segundo plano, isso possui um custo de CPU elevado
+
+> Os segmentos são espaços de armazenamento imutáveis. De tempos em tempos o Elasticsearch faz a mesclagem em segundo plano de segmentos menores em **novos** segmentos maiores.
+
+Podemos configurar o número de segmentos no contexto do índice. Segue algumas das propriedades mais comuns a respeito do assunto:
+  - **index.merge.policy.segments_per_tier**: número de segmentos por shard. O processo de mesclagem fará o possível para mesclar os segmentos de modo a manter o total abaixo do valor definido nesta propriedade
+  - **index.merge.policy.max_merge_at_once**: limita o número de segmentos que podem ser mesclados por vez. Essa configuração impede que o cluster entre em colapso ao limitar o número de operações de mesclagem em paralelo no contexto do índice. Caso esteja tendo um consumo elevado de disco, pode ser interessante aumentar o valor da própriedade *segments_per_tier* e reduzir o número de mesclagens em paralelo, equalizando desta forma o valor entre as duas propriedades
+  - **index.merge.policy.max_merged_segment**: segmentos maiores que este limite não serão mesclado. Podemos diminuir este valor para ter mesclagens mais rápidas, afinal de contas segmentos maiores são mais caros para mesclar
+
+Referência: https://www.elastic.co/pt/blog/how-many-shards-should-i-have-in-my-elasticsearch-cluster
+
 ## Mapeamento de dados
 
 Dados submetidos ao Elastic sem mapeamento predefinido serão automaticamente mapeados e indexados com base em um conjunto genérico. Strings normalmente serão indexadas duas vezes, uma para o tipo `text` e outra para `keyword`, já números inteiros receberão o maior tipo inteiro disponível, neste caso `long`.
