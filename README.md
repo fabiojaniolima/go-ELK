@@ -1,28 +1,32 @@
 # go-ELK
 
-Este repositório tem como premissa ser um guia de instalação, manutenção e aplicação de boas práticas de uso da Stack **ELK** em diferentes contextos. Artefatos como templates, scripts e outros serão igualmente contemplados por este repositório.
+> **Dominando o Elastic Stack: Do Lab à Produção**
 
-> As palavras-chave "DEVE", "NÃO DEVE", "REQUER", "DEVERIA", "NÃO DEVERIA", "PODERIA", "NÃO PODERIA", "RECOMENDÁVEL", "PODE", e "OPCIONAL" neste documento devem ser interpretadas como descritas no [RFC 2119](http://tools.ietf.org/html/rfc2119). Tradução livre [RFC 2119 pt-br](http://rfc.pt.webiwg.org/rfc2119).
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Elastic Stack](https://img.shields.io/badge/Elastic-9.x-005571?logo=elasticsearch)
+![Status](https://img.shields.io/badge/status-active-success.svg)
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 
-## Importante
+Bem-vindo ao **go-ELK**! 🚀
 
-Você DEVE ter em mente que para os propósitos gerais deste documento o diretório *root de trabalho* será:
+Este repositório é um hub educativo e prático dedicado ao universo do **Elastic Stack** (ELK). O nome é um convite: *"Go!"* — vamos mergulhar na busca, análise de logs, observabilidade e segurança de dados.
 
-- **Linux ou MacOS**: `/DevOps`
-- **Windows**: `E:\DevOps`
+Aqui, transformamos teoria em prática, cobrindo desde o core (Elasticsearch, Kibana, Logstash) até implementações avançadas de SIEM e Observabilidade. Além disso, exploramos o poder do Elastic como motor de busca de alta performance e plataforma de inteligência de dados, transformando logs e métricas em insights estratégicos para o negócio.
 
-> Em alguns momentos, exceto em arquivos de configuração poderei considerar citar somente a referência `/DevOps` com o intuito de tornar o texto mais compacto, deste modo caberá a você converter este caminho para o padrão Windows caso está seja sua plataforma.
+## O que você vai encontrar
 
-## Docs
+Este projeto vai além do básico, explorando ecossistemas completos:
 
-- [Elasticsearch](./docs/elastic/README.md)
-- [Logstash](./docs/logstash/README.md)
-- [Kibana](./docs/kibana/README.md)
+- 🔍 **Core Stack:** Aprofundamento em Elasticsearch, Logstash e Kibana.
+- 🐙 **Coleta de Dados:** Implantação e uso de diversos Beats e Elastic Agent.
+- 🛡️ **Segurança (SIEM):** Detecção de ameaças e análise forense.
+- 📊 **Observabilidade:** Métricas, Logs e APM (Application Performance Monitoring).
+- 🤖 **Automação (IaC):** Provisionamento automatico com Terraform e Ansible.
 
-Documentação oficial da Stack: https://www.elastic.co/guide/index.html
+## Conteúdo
 
-## Artifacts
+- [Comece por aqui](/docs/README.md)
 
-Este diretório tem por objetivo concentrar artefatos como scripts, templates, modelos de configuração e demais itens que venham a ser úteis na entrega de tarefas diárias.
+## Licença
 
-> Os arquivos insomnia_workspace-main_apis.json podem ser abertos no software Insomnia Core. Estes arquivos possuem uma lista pré-fabricadas de requests. Bom proveito :)
+Todo o conteúdo presente neste diretório segue o que determina a licença [MIT](/LICENSE).
