@@ -4,7 +4,12 @@
 
 ## 📚 Conteúdo
 
-- [Elasticsearch](./elastic/README.md)
+- [Introdução](./introducao.md)
+- [Conhecendo o Elasticsearch](./conhecendo-o-elasticsearch.md)
+
+
+**Conteúdo antigo, pendente de revisão e reestruturação:**
+- [Elasticsearch](./elastic//README.md)
 - [Logstash](./logstash/README.md)
 - [Kibana](./kibana/README.md)
 
